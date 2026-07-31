@@ -1,0 +1,12 @@
+配色方案文件格式（.knotjot-theme；兼容旧版 .bmaptheme）
+================================
+本质是 JSON。必填两项：
+  "app": "brace-mindmap-theme"   ← 固定标识，缺失或不对会显示「无法读取」
+  "accent": "#5b8def"            ← 6 位十六进制主色，不合法会显示「无法读取」
+可选项（不填会按 accent 自动推导）：
+  "name"        配色名（显示用）
+  "accentSoft"  浅色（选中底色）
+  "sideGrad"    开始页侧栏渐变，格式 角度,色1,色2   例: 160deg,#5b8def,#7b6cf0
+  "thumbBlank" / "thumbSample" / "thumbOpen"  三张卡片渐变
+
+用法：软件内「设置 → 🎨 配色方案（展开）→ 导入配色方案」，或把 .knotjot-theme 文件拖进虚线框即可添加；旧版 .bmaptheme 同样可导入。

@@ -1,0 +1,15 @@
+:root{ --accent:#0a8a6f; --accent-soft:#e2f3ee; --bg:#f3f8f7; }
+#nodes .card{display:block!important;flex-direction:initial!important;min-width:0!important;width:max-content!important;background:var(--card)!important;border:1.5px solid var(--card-border)!important;border-radius:12px!important;box-shadow:var(--shadow)!important;}
+#nodes .card-inner{width:max-content!important;}
+.actions,#floatBar{padding:4px!important;}
+.actions .act,#floatBar .act{width:30px!important;height:28px!important;min-height:0!important;padding:0!important;margin:0!important;border:none!important;background:transparent!important;border-radius:7px!important;font-size:14px!important;line-height:1!important;box-shadow:none!important;}
+.act.wide{width:auto!important;padding:0 8px!important;}
+.popmenu .mi,#ctx .item{min-height:0!important;}
+.btn{border-radius:16px!important;}
+
+.start-side{background:linear-gradient(160deg,#0a8a6f,#0c6f5a)!important;}
+.nc-thumb.blank{background:linear-gradient(135deg,#0a8a6f,#16a085)!important;}
+.nc-thumb.sample{background:linear-gradient(135deg,#0c6f5a,#0a8a6f)!important;}
+.nc-thumb.open{background:linear-gradient(135deg,#1f9e8a,#0a8a6f)!important;}
+.newcard:hover{border-color:#0a8a6f!important;}
+#toolbar .title .lbl::after{content:" PICO";color:var(--accent);font-weight:600;font-size:11px;margin-left:2px;}

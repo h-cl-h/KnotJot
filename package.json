@@ -1,0 +1,128 @@
+{
+  "name": "knotjot",
+  "productName": "KnotJot",
+  "version": "1.0.0",
+  "description": "KnotJot — a flexible, local-first desktop mind-mapping tool",
+  "author": "happymore",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/h-cl-h/KnotJot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h-cl-h/KnotJot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/h-cl-h/KnotJot/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test:source-layout": "node --test tests/source-layout.test.js",
+    "test:performance": "electron tests/performance-smoke.js",
+    "test:text-styles": "electron tests/text-styles-smoke.js",
+    "test:text-input": "electron tests/live-input-rules-smoke.js",
+    "test:text-input-parity": "node tests/input-rule-parity-smoke.js",
+    "test:user-style": "electron tests/user-style-centering-smoke.js",
+    "test:node-textboxes": "electron tests/node-textbox-audit-smoke.js",
+    "test:sizing-modes": "electron tests/two-sizing-modes-smoke.js",
+    "test:wpf-style-parity": "electron tests/wpf-real-library-parity-smoke.js",
+    "test:text-region-roundtrip": "electron tests/text-region-roundtrip-smoke.js",
+    "test:visual-unified": "electron tests/unified-layer-visual-smoke.js",
+    "test:real-style-sizing": "electron tests/real-style-sizing-regression.js",
+    "test:appearance": "electron tests/appearance-background-smoke.js",
+    "test:ui-hot-sync": "electron tests/ui-skins-hot-reload-smoke.js",
+    "test:core": "node tests/core-regression.test.js",
+    "test:hardening": "electron tests/hardening-smoke.js",
+    "generate:stress-fixture": "node tests/generate-stress-fixture.js",
+    "dist": "electron-builder --win",
+    "dist:win": "electron-builder --win",
+    "dist:win:installer": "electron-builder --win nsis",
+    "dist:win:portable": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.1",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "io.github.h-cl-h.knotjot",
+    "productName": "KnotJot",
+    "directories": {
+      "buildResources": "resources/icons",
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "src/**/*",
+      "resources/vendor/**/*",
+      "resources/skins/**/*",
+      "resources/themes/**/*",
+      "resources/text-styles/**/*",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "extraResources": [
+      {
+        "from": "../../../shared/ui-skin-protocol.json",
+        "to": "protocols/ui-skin-protocol.json"
+      },
+      {
+        "from": "LICENSE",
+        "to": "LICENSE"
+      },
+      {
+        "from": "THIRD_PARTY_NOTICES.md",
+        "to": "THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "from": "resources/licenses",
+        "to": "THIRD_PARTY_LICENSES"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "resources/icons/icon.ico"
+    },
+    "nsis": {
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icons/icon.ico",
+      "uninstallerIcon": "resources/icons/icon.ico",
+      "installerHeaderIcon": "resources/icons/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "KnotJot"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-Portable.${ext}",
+      "unpackDirName": "KnotJot",
+      "splashImage": null
+    },
+    "fileAssociations": [
+      {
+        "ext": "knotjot",
+        "name": "KnotJot 思维导图",
+        "description": "KnotJot 思维导图文件",
+        "icon": "resources/icons/icon.ico",
+        "role": "Editor"
+      },
+      {
+        "ext": "bmap",
+        "name": "KnotJot 思维导图（旧版兼容）",
+        "description": "KnotJot 旧版 BMAP 思维导图文件",
+        "icon": "resources/icons/icon.ico",
+        "role": "Editor"
+      }
+    ],
+    "compression": "normal"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.1"
+  }
+}

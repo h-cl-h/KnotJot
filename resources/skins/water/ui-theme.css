@@ -1,0 +1,15 @@
+:root{ --accent:#c0560f; --accent-soft:#fbe9dd; --bg:#fdf7f1; }
+#nodes .card{display:block!important;flex-direction:initial!important;min-width:0!important;width:max-content!important;background:var(--card)!important;border:1.5px solid var(--card-border)!important;border-radius:12px!important;box-shadow:var(--shadow)!important;}
+#nodes .card-inner{width:max-content!important;}
+.actions,#floatBar{padding:4px!important;}
+.actions .act,#floatBar .act{width:30px!important;height:28px!important;min-height:0!important;padding:0!important;margin:0!important;border:none!important;background:transparent!important;border-radius:7px!important;font-size:14px!important;line-height:1!important;box-shadow:none!important;}
+.act.wide{width:auto!important;padding:0 8px!important;}
+.popmenu .mi,#ctx .item{min-height:0!important;}
+.btn{border-radius:10px!important;}
+
+.start-side{background:linear-gradient(160deg,#c0560f,#9c3f08)!important;}
+.nc-thumb.blank{background:linear-gradient(135deg,#c0560f,#e0701f)!important;}
+.nc-thumb.sample{background:linear-gradient(135deg,#9c3f08,#c0560f)!important;}
+.nc-thumb.open{background:linear-gradient(135deg,#d9893a,#c0560f)!important;}
+.newcard:hover{border-color:#c0560f!important;}
+#toolbar .title .lbl::after{content:" WATER";color:var(--accent);font-weight:600;font-size:11px;margin-left:2px;}

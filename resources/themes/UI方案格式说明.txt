@@ -1,0 +1,39 @@
+================ UI 方案（.knotjot-ui）格式说明 ================
+
+在「设置 → UI 设置 → 导入 UI 方案」里可以导入自定义 UI 预设。
+支持两种写法；新文件建议使用 .knotjot-ui，旧 .bmapui 仍可导入（本质是 JSON，用记事本即可编辑）。
+
+必须带标识字段： "app": "brace-mindmap-ui"
+
+------------------------------------------------------------
+写法 A：基底皮肤 + 主色微调（最简单）
+  在某套内置皮肤的基础上换个主色调。
+  base 可填： default / skeleton / tailwind / pico / water /
+             photon / coreui / shoelace / win98 / xp / win7 / nes
+
+  {
+    "app": "brace-mindmap-ui",
+    "name": "我的青绿 XP",
+    "base": "xp",
+    "accent": "#0a8a6f",
+    "accentSoft": "#e2f3ee"
+  }
+
+  （accentSoft 可省略，会自动算一个浅色）
+
+------------------------------------------------------------
+写法 B：整段 CSS 皮肤（最自由）
+  自己写一整段 CSS 来重绘界面。会作为 <style> 注入，
+  建议用 !important 覆盖现有选择器（#toolbar / .btn / .card 等）。
+
+  {
+    "app": "brace-mindmap-ui",
+    "name": "粉黑朋克",
+    "css": "body{background:#1a1a1a!important}.btn.primary{background:#e91e63!important;color:#fff!important;border-color:#e91e63!important}"
+  }
+
+------------------------------------------------------------
+导入后：
+- 会出现在「更多 UI 预设」画廊里，带预览图和名字；
+- 自定义的预设鼠标悬停时右上角有「×」可删除；
+- 兼容旧的 .bmaptheme（只改主题色），导入后进入「主题色」那一组。

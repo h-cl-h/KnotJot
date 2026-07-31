@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.build-tools/
+.artifacts/
+.cache/
+.tmp/
+coverage/
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini

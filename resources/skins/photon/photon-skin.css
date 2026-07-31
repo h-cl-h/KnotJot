@@ -1,0 +1,93 @@
+/* ===== Photon 皮肤层 · macOS 桌面风 ===== */
+/* 在 ui-theme.css(含功能性修正)之后加载,只重绘外壳;保留元素 id 与功能 */
+:root{
+  --accent:#1a82fb!important; --accent-soft:#e3f0ff!important;
+  --card-border:#d2d0d2!important; --ink:#333!important; --muted:#8a8a8a!important; --brace:#a9b0bb!important;
+}
+html,body{font-family:-apple-system,"SF Pro Text","Segoe UI","Microsoft YaHei",system-ui,sans-serif!important; color:#333!important; background:#eceef1!important;}
+
+/* 工具栏:Photon toolbar-header 浅灰渐变 */
+#toolbar{
+  height:48px!important; background:linear-gradient(to bottom,#f5f5f4,#e8e8e6)!important; backdrop-filter:none!important;
+  border:none!important; border-bottom:1px solid #c2c0c2!important; gap:6px!important; padding:0 12px!important;
+}
+#toolbar .title{font-weight:600!important; color:#333!important; font-size:13px!important;}
+#toolbar .title:hover{color:#1a82fb!important;}
+#toolbar .title .dot{background:#1a82fb!important; box-shadow:none!important;}
+#hint{color:#9a9a9a!important; font-size:11px!important;}
+.vsep{background:#c2c0c2!important; height:20px!important;}
+
+/* 按钮:Photon btn-default 渐变 */
+.btn{
+  height:auto!important; min-height:26px!important; padding:4px 11px!important; font-size:12px!important; border-radius:4px!important;
+  color:#333!important; border:1px solid #c2c0c2!important; border-bottom-color:#a19fa1!important;
+  background:linear-gradient(to bottom,#fcfcfc 0%,#f1f1f1 100%)!important; box-shadow:0 1px 1px rgba(0,0,0,.06)!important; transition:none!important;
+}
+.btn:hover{background:linear-gradient(to bottom,#f6f6f6 0%,#e9e9e9 100%)!important; color:#333!important;}
+.btn:active{background:linear-gradient(to bottom,#e9e9e9 0%,#dcdcdc 100%)!important;}
+.btn .caret{opacity:.55!important;}
+.btn.primary,.btn.toggle-on,.btn.on{
+  color:#fff!important; border:1px solid #388df8!important; border-bottom-color:#0866dc!important;
+  background:linear-gradient(to bottom,#6eb4f7 0%,#1a82fb 100%)!important; text-shadow:0 1px 1px rgba(0,0,0,.15)!important;
+}
+.btn.primary:hover,.btn.toggle-on:hover{filter:brightness(1.03)!important; color:#fff!important;}
+.btn.ghost{background:transparent!important; border-color:transparent!important; box-shadow:none!important;}
+.btn:disabled,.btn:disabled:hover{opacity:.45!important;}
+
+/* 文件名输入 */
+.fname{background:#fff!important; color:#333!important; border:1px solid #c8c6c8!important; border-radius:4px!important; box-shadow:inset 0 1px 1px rgba(0,0,0,.05)!important; padding:3px 8px!important;}
+.fname:hover{background:#fff!important;}
+
+/* 画布 */
+#canvas{background:#eceef1!important;}
+#world{background-image:linear-gradient(#e0e2e6 1px,transparent 1px),linear-gradient(90deg,#e0e2e6 1px,transparent 1px)!important;}
+.brace-path,.brace-stub,.link-line{stroke:#9aa1ad!important;}
+.anchor{fill:#fff!important; stroke:#1a82fb!important;}
+
+/* 节点卡片(不动 display 等功能性属性,只调外观) */
+#nodes .card{border:1px solid #d2d0d2!important; border-radius:7px!important; box-shadow:0 1px 3px rgba(0,0,0,.10),0 1px 1px rgba(0,0,0,.04)!important; background:#fff!important; animation:none!important;}
+#nodes .card:hover{box-shadow:0 2px 6px rgba(0,0,0,.13)!important;}
+.node.sel .card{border-color:#1a82fb!important; box-shadow:0 0 0 3px rgba(26,130,251,.25)!important;}
+.card-inner{color:#333!important;}
+
+/* 菜单:macOS 白色圆角 + 阴影 */
+.popmenu,#ctx{background:#fff!important; border:1px solid #d2d0d2!important; border-radius:7px!important; box-shadow:0 6px 20px rgba(0,0,0,.18)!important; color:#333!important;}
+.mi,#ctx .item{color:#333!important; border-radius:5px!important;}
+.mi:hover,.mi.active,#ctx .item:hover{background:#1a82fb!important; color:#fff!important;}
+.mi .sk,.mi .arrow,.mi:hover .sk,.mi:hover .arrow,.mi .chk{color:inherit!important;}
+#ctx .item.danger:hover{background:#ff3b30!important; color:#fff!important;}
+.msep,.sep,#ctx .sep{background:#e4e2e4!important;}
+
+/* 操作条 / 浮动条 */
+.actions,#floatBar{background:#fff!important; border:1px solid #d2d0d2!important; border-radius:7px!important; box-shadow:0 4px 14px rgba(0,0,0,.16)!important;}
+.act{color:#333!important;}
+.act:hover{background:#1a82fb!important; color:#fff!important;}
+.act.del:hover{background:#ff3b30!important; color:#fff!important;}
+.act.on{background:#1a82fb!important; color:#fff!important;}
+
+/* 设置对话框:macOS 卡片 */
+#settingsMask{background:rgba(0,0,0,.22)!important; backdrop-filter:none!important;}
+#settingsBox{background:#fff!important; border:1px solid #cfcdcf!important; border-radius:10px!important; box-shadow:0 14px 40px rgba(0,0,0,.28)!important; color:#333!important;}
+#settingsBox .set-title{color:#333!important; font-weight:600!important;}
+#settingsBox .set-label,#settingsBox .set-hint{color:#444!important;} #settingsBox .set-hint{color:#8a8a8a!important;}
+.set-sec{color:#1a82fb!important;}
+.scheme-toggle{color:#1a82fb!important;}
+.scheme-preview{border:1px solid #d2d0d2!important; border-radius:7px!important;}
+.scheme-preview .pv-btn,.scheme-preview .pv-chip{border-radius:5px!important;}
+.scheme-preview .pv-cards span{border-radius:4px!important;}
+.scheme-preview .pv-name{color:#8a8a8a!important;}
+.scheme-drop{border-radius:7px!important; border:1px dashed #c2c0c2!important; color:#8a8a8a!important;}
+
+/* 颜色面板 */
+#colorPanel{background:#fff!important; border:1px solid #d2d0d2!important; border-radius:9px!important; box-shadow:0 8px 24px rgba(0,0,0,.2)!important; color:#333!important;}
+
+/* 开始页 */
+.start-side{background:linear-gradient(160deg,#1a82fb,#0a63c9)!important;}
+.side-btn{background:rgba(255,255,255,.16)!important; color:#fff!important; border:1px solid rgba(255,255,255,.4)!important; border-radius:5px!important;}
+.start-main{background:#eceef1!important;}
+.newcard{background:#fff!important; border:1px solid #d8d6d8!important; border-radius:9px!important; box-shadow:0 1px 4px rgba(0,0,0,.08)!important;}
+.newcard:hover{border-color:#1a82fb!important; box-shadow:0 4px 14px rgba(26,130,251,.18)!important;}
+.nc-s{color:#8a8a8a!important;}
+
+#empty .l1{color:#444!important;} #empty .l2{color:#9a9a9a!important;}
+#readBadge{background:rgba(60,60,67,.9)!important; border-radius:7px!important;}
