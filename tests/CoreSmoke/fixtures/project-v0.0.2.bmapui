@@ -1,0 +1,12 @@
+{
+  "app": "brace-mindmap-ui",
+  "version": 2,
+  "name": "V0.0.2 fixture",
+  "activeTarget": "toolbar",
+  "project": {
+    "elements": [
+      { "type": "component", "id": "legacy_toolbar", "name": "旧工具栏", "visible": true, "comp": "toolbar", "props": { "bg": "#123456", "border": "#abcdef" } },
+      { "type": "ellipse", "id": "legacy_ellipse", "name": "旧椭圆", "visible": true, "x": 530, "y": 290, "w": 70, "h": 70, "fill": "#55aa66", "stroke": "#226633", "strokeW": 2, "opacity": 1 }
+    ]
+  }
+}

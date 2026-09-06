@@ -1,0 +1,19 @@
+{
+  "app": "brace-mindmap-ui",
+  "version": 1,
+  "name": "V0.0.1 fixture",
+  "activeTarget": "card",
+  "project": {
+    "regions": {
+      "card": { "bg": "#112233", "border": "#445566", "text": "#ddeeff" },
+      "sel": { "accent": "#3366cc" },
+      "toolbar": { "bg": "#fafafa", "border": "#cccccc" },
+      "text": { "ink": "#202020", "muted": "#777777" },
+      "btn": { "bg": "#ffffff", "border": "#999999", "text": "#111111" },
+      "btnPrimary": { "bg": "#3366cc", "text": "#ffffff" }
+    },
+    "shapes": [
+      { "type": "rect", "id": "legacy_shape", "name": "旧图形", "visible": true, "x": 510, "y": 290, "w": 80, "h": 50, "fill": "#ffcc00", "stroke": "#000000", "strokeW": 1, "opacity": 1 }
+    ]
+  }
+}

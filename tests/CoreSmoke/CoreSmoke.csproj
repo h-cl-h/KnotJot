@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Define the Windows runtime and project compilation identity.
+       定义 Windows 运行时与项目编译身份。 -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+  <!-- Declare package, source, content, or project dependencies for this build.
+       声明本构建的软件包、源码、内容或工程依赖。 -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\KnotJot.UiEditor.csproj" />
+  </ItemGroup>
+</Project>

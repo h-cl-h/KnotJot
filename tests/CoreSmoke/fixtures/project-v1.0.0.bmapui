@@ -1,0 +1,19 @@
+{
+  "app": "knotjot-ui-editor-project",
+  "id": "ui_fixture_v100",
+  "name": "V1.0.0 fixture",
+  "version": 5,
+  "schema": "knotjot-ui-skin",
+  "schemaVersion": 2,
+  "activeTarget": "card",
+  "export": { "clipToFrame": false, "customTextAllowed": true },
+  "designs": {
+    "card": {
+      "schemaVersion": 4,
+      "elements": [
+        { "type": "rect", "id": "card_shape", "name": "卡片", "visible": true, "x": 470, "y": 286, "w": 260, "h": 88, "fill": "#334455", "stroke": "#112233", "strokeW": 1, "opacity": 1, "lockAspect": false },
+        { "type": "textregion", "id": "card_text", "name": "文本区", "visible": true, "x": 486, "y": 298, "w": 228, "h": 64, "text": "第一行\n\n第二行", "customText": true, "fontSize": 14, "color": "#ffffff", "alignH": "center", "alignV": "middle", "bold": false }
+      ]
+    }
+  }
+}

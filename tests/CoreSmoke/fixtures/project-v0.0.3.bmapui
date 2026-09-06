@@ -1,0 +1,14 @@
+{
+  "app": "brace-mindmap-ui",
+  "version": 3,
+  "name": "V0.0.3 fixture",
+  "activeTarget": "menuBox",
+  "designs": {
+    "menuBox": {
+      "schemaVersion": 4,
+      "elements": [
+        { "type": "roundrect", "id": "menu_shape", "name": "菜单底板", "visible": true, "x": 490, "y": 245, "w": 220, "h": 170, "fill": "#ffffff", "stroke": "#dddddd", "strokeW": 1, "radius": 10, "opacity": 1 }
+      ]
+    }
+  }
+}

@@ -1,164 +1,104 @@
-[h-cl-h/KnotJot](https://github.com/h-cl-h/KnotJot)
+# KnotJot UI Editor V1.0.0 (English)
 
-<div align="center">
-  <img src="resources/icons/icon-256.png" width="120" alt="KnotJot">
-  <h1>KnotJot</h1>
-  <p><b>A flexible, local-first mind-mapping tool for Windows</b></p>
-  <p>Capture ideas · Connect thoughts · Shape your own workspace</p>
-</div>
+KnotJot UI Editor designs complete UI skins for KnotJot. Components you do not design keep their original appearance. You can save a standalone `.knotjot-ui` project or connect to KnotJot and update the same skin dynamically. Legacy `.bmapui` projects remain readable.
+
+## Quick start
+
+1. Pick a component on the left, such as a node, toolbar, button, or menu.
+2. Draw vector shapes, ink, or imported images inside its design frame.
+3. Add a text region when the real component must remain editable.
+4. Use Real Preview to verify the skin against KnotJot-compatible markup.
+5. Save the standalone project, or connect to KnotJot and sync it as a separate action.
+
+A running KnotJot instance normally reloads the updated skin within about one second. The project keeps a stable UI ID, so repeated syncs update one record instead of creating duplicates.
+
+## Main V1.0.0 features
+
+- Multi-select, marquee select, grouped move and resize, layer locks, visibility, deletion, z-order buttons, and drag-and-drop reordering.
+- Stable mask target IDs with Alpha, Inverse Alpha, Luminance, and Inverse Luminance modes.
+- A 100-step undo history, normalized project data, bounded image imports, and atomic file replacement.
+- A shared `knotjot-ui-skins` library with revision, writer ID, SHA-256 content hashes, editable project data, and live reload.
+- Exact WebView2 package version `1.0.4078.44`.
+
+## Compatibility and safety
+
+Older adjacent masks are migrated when possible. Missing V1.0.0 fields receive safe defaults. Invalid or oversized project data is normalized or rejected, and a damaged existing skin library is preserved rather than silently overwritten.
+
+## Build
+
+```powershell
+dotnet build "KnotJot.UiEditor.csproj" -c Release
+dotnet run --project "tests\CoreSmoke\CoreSmoke.csproj" -c Release
+dotnet publish "KnotJot.UiEditor.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+makensis installer.nsi
+```
+
+The editor is GPL-3.0-only. See [LICENSE](LICENSE), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and `THIRD_PARTY_LICENSES` for complete notices.
 
 ---
 
-## English
+# KnotJot 界面编辑器 V1.0.0
 
-### Meet KnotJot
+KnotJot 界面编辑器用于设计 KnotJot 的整套 UI 外观。没有设计的部件继续使用原版；设计过的部件会导出为带功能的 CSS 皮肤。它既可以独立保存 `.knotjot-ui`，也可以连接 KnotJot 后动态同步；旧 `.bmapui` 工程仍可打开。
 
-KnotJot is a free, open-source desktop app for mind mapping, planning, and visual note-taking. It works without a required account, keeps core editing local, and saves each map as a readable `.knotjot` JSON file on your computer. Legacy `.bmap` files remain supported for opening.
+## 普通用户快速开始
 
-V1.0.0 is the first fully branded KnotJot release. The app, installer, settings directory, shortcuts, file association, window titles, exported presets, and internal live-sync formats all use the KnotJot name.
+1. 在左侧选择要设计的部件，例如普通节点、选中节点、工具栏或菜单。
+2. 在设计框中画矩形、圆角矩形、椭圆、线条，或导入图片、使用画笔。
+3. 需要保留可输入文字时，放置“文本区”；未设计的部件会自动保持原版。
+4. 点击“真实预览”检查节点、工具栏和菜单在真实结构中的效果。
+5. 点击“保存 .knotjot-ui”保存工程；或先“连接主程序…”，再点“同步到 KnotJot”。两个操作语义独立。
 
-### What you can do
+同步后，运行中的 KnotJot 通常会在约 1 秒内更新。编辑器会先向主程序查询真实皮肤库路径；连续同步同一个工程会更新同一个 UI ID。独立 `.knotjot-ui` 文件可单独备份和移动，旧 `.bmapui` 工程仍可打开。
 
-- **Choose the right structure** — create brace maps, spider-web maps, logic charts, org charts, trees, timelines, fishbones, matrices, and tree tables. A whole map or a single branch can use a different structure.
-- **Keep several canvases in one file** — add, rename, delete, and switch sheets from the bottom tabs, or open a branch in its own sheet.
-- **Arrange freely or tidy automatically** — drag topics anywhere, use alignment guides and magnetic snapping, adjust spacing, or restore a clean layout with Smart Tidy.
-- **Work quickly from the keyboard** — add children and siblings, rename or move topics, and remap shortcuts in Settings.
-- **Edit from the outline** — reorganize the hierarchy, change parents, collapse sections, and update task progress in a synchronized linear view.
-- **Add useful details** — attach markers, tags, notes, hyperlinks, inline images, assignees, dates, progress, and a movable marker legend.
-- **Plan with Gantt view** — turn topic dates and progress into a visual schedule, then jump from a Gantt bar back to its topic.
-- **Customize text boxes** — use built-in or user-created styles, control fonts and input rules, resize freely or keep a fixed aspect ratio, and apply styles to one or many boxes.
-- **Change the whole workspace** — switch built-in UI skins, import custom skins, and edit the original UI colors and canvas background.
-- **Use AI only when you want it** — connect your own compatible model endpoint and API key. Normal editing does not require AI.
+## V1.0.0 重点改进
 
-### Appearance and image backgrounds
+- 图层支持多选、Ctrl 增减选择、空白拖拽框选、组合移动、组合缩放、微调、显隐、锁定、删除、置顶/置底和拖拽排序。
+- 锁定图层仍可选择查看，但不能移动、缩放、删除或调整层级。
+- 撤销历史提高到 100 步；连续微调继续合并为合理的撤销步骤。
+- 蒙版使用稳定目标 ID，不再依赖“必须紧挨下一层”。图层重排后关联仍在。
+- 蒙版支持 Alpha、反向 Alpha、亮度和反向亮度；WPF 画布预览与 CSS/SVG 导出使用同一目标规则。
+- 工程保存采用同目录临时文件后原子替换；模型会限制异常坐标、无穷数、超大图片、过多元素和无效 Base64。
+- 图片导入上限为 12 MB、最长边 8192 像素、总像素 4000 万。
+- 新增主程序连接、稳定 UI ID、SHA-256 内容哈希、revision/writerId 和可编辑工程数据同步。
+- WebView2 NuGet 版本固定为 `1.0.4078.44`，不再使用通配版本。
 
-With the original UI selected, open **Settings → Appearance** to edit the canvas, grid, cards, text, toolbar, menus, connectors, and start-page colors. These color controls affect only the original UI and do not overwrite imported skins.
+## 蒙版说明
 
-Canvas backgrounds support PNG, JPEG, and WebP. KnotJot does not impose its own file-size or pixel-dimension limit. After importing an image, use the preview before applying it:
+选中图形、手绘或图片后点击“加遮罩”，编辑器会创建一个圆角矩形蒙版并绑定当前目标。也可以把普通非线条图形勾选为蒙版，再在右侧选择模式和目标图层。
 
-- **Unlimited canvas** repeats the image across the working area at the selected scale.
-- **Limited canvas** creates a bounded workspace. The default is **6000 × 3600**, and the canvas size, image scale, and image position remain adjustable.
-- The grid stays behind imported images instead of covering the photograph.
-- Preview zoom changes the background scale while the empty reference text box stays at a stable screen size.
-- Applying the appearance saves it for reopening and makes it the default for newly created maps. The active map also stores its own appearance in the `.knotjot` file.
+- Alpha：显示蒙版覆盖范围。
+- 反向 Alpha：隐藏蒙版覆盖范围，显示其余部分。
+- 亮度：按蒙版填充色亮度与透明度决定显示强度。
+- 反向亮度：对亮度结果取反。
 
-### Live UI editing
+旧版没有目标 ID 的相邻蒙版会在读取时迁移；旧文件不会被静默覆盖。
 
-KnotJot can watch its UI skin library while running. A compatible UI editor can save a skin to the connected library, and the open app refreshes it without restarting or losing the current map, selection, zoom, or text-editing state.
+## 文件与兼容性
 
-UI skins and text-box styles use separate libraries and separate style scopes, so changing one does not overwrite the other.
+- 独立工程：新的 `.knotjot-ui` 使用 `app: "knotjot-ui-editor-project"`、`schema: "knotjot-ui-skin"` 和 version 5，并保存导出设置；旧 `.bmapui` 工程仍在迁移入口读取。
+- 动态库：`knotjot-ui-skins` version 1。每条记录包含 CSS、内容哈希、写入者、时间和可编辑 `editorData`。
+- V0.0.3 和更早工程缺少的新字段会自动补默认值；旧相邻蒙版会尽量迁移为稳定目标。
+- UI 皮肤只负责界面结构和装饰；KnotJot 文本框样式文件与 UI 皮肤库分开保存。
 
-### Download and run
+## 安全限制
 
-KnotJot V1.0.0 is provided for **Windows x64**.
+工程读取会规范化 ID、数值、颜色、透明度、混合模式、手绘点数和嵌入图片。最多保留 5000 个元素、每条手绘最多 100000 个点、单张嵌入图片 Base64 最多 16 MB 字符。动态皮肤库最多 500 条、总文件最多 16 MB、单条动态同步 CSS 最多 2 MB（以随程序发布的协议为准）。现有库损坏或标识不兼容时，同步会报错并保留原文件。
 
-1. Open the repository's **Releases** page.
-2. Download `KnotJot-Setup-1.0.0.exe`.
-3. Run the installer and choose an installation folder.
-4. Start KnotJot from the desktop or Start menu.
+## 构建与测试
 
-The release is not commercially code-signed, so Windows may show an Unknown Publisher or SmartScreen warning. Verify that the file came from the official repository before running it.
+需要 Windows、.NET 8 SDK 和 WebView2 NuGet 包：
 
-### Your data and privacy
-
-- Maps are saved to locations you choose.
-- Core editing works locally and does not require an account.
-- UI skins, text-box styles, and appearance preferences are stored in KnotJot's local settings directory.
-- An API key is used only when you configure and invoke an AI endpoint. Keep the key private and review that provider's privacy policy.
-
-### Run from source
-
-Requirements: Node.js 18 or later and npm.
-
-```bash
-npm install
-npm start
+```powershell
+dotnet build "KnotJot.UiEditor.csproj" -c Release
+dotnet run --project "tests\CoreSmoke\CoreSmoke.csproj" -c Release
+dotnet publish "KnotJot.UiEditor.csproj" -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+makensis installer.nsi
 ```
 
-Build the Windows package with:
+CoreSmoke 覆盖模型安全、旧文件迁移、稳定蒙版、四种蒙版输出、原子保存、连接恢复、同 ID 动态更新和编辑工程同步。更多架构、格式与迁移细节见 [DEVELOPMENT.md](DEVELOPMENT.md)、[FORMAT.md](FORMAT.md) 和 [MIGRATION.md](MIGRATION.md)。
 
-```bash
-npm run dist:win
-```
+## 许可证
 
-### License
+编辑器自有代码采用 GPL-3.0-only，完整文本见 [LICENSE](LICENSE)。WebView2 与自包含 .NET 运行时的声明和许可副本见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 `THIRD_PARTY_LICENSES`。
 
-KnotJot is licensed under **GPL-3.0-only**. Commercial use is allowed, but distributed derivative versions must follow the GPL requirements and provide corresponding source code. Bundled libraries and fonts keep their own compatible licenses; see [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
----
-
-## 中文
-
-### 认识 KnotJot
-
-KnotJot 是一款免费、开源的 Windows 桌面思维导图工具，也可以用来做计划和可视化笔记。正常使用不强制登录，核心编辑功能在本地运行，每份导图都以可读的 `.knotjot` JSON 文件保存在你的电脑上；旧版 `.bmap` 文件仍可打开。
-
-V1.0.0 是第一份完整使用 KnotJot 品牌的正式版本。程序、安装包、设置目录、快捷方式、文件关联、窗口标题、导出的预设和内部实时同步格式都统一使用 KnotJot 名称。
-
-### 你可以用它做什么
-
-- **按想法选择结构**——支持大括号图、蜘蛛网图、逻辑图、组织结构图、树状图、时间轴、鱼骨图、矩阵和树形表格；可以切换整张导图，也可以只改变一个分支。
-- **一个文件放多张画布**——通过底部标签新增、改名、删除和切换画布，也可以把某个分支单独放进新画布。
-- **自由摆放，也能自动整理**——主题可以随意拖动，可使用对齐参考线和磁吸、调整间距，或用智能整理恢复清晰布局。
-- **用键盘快速建图**——快速添加子级和同级、重命名或移动主题，并可在设置中重新录制快捷键。
-- **在大纲中编辑**——用线性方式调整层级、改变父级、折叠内容和更新任务进度，画布会保持同步。
-- **给主题补充信息**——添加标记、标签、备注、超链接、节点图片、负责人、日期、进度和可拖动的标记图例。
-- **用甘特图做计划**——把主题日期与进度变成时间轴，点击甘特条即可回到对应主题。
-- **自定义文本框**——使用内置或自制样式，调整字体和输入规则，选择自由拉伸或固定长宽比，并可批量应用。
-- **改变整个工作区**——切换内置 UI、导入自定义 UI，并修改原版 UI 的颜色和画布背景。
-- **按需使用 AI**——连接你自己的兼容模型地址和 API Key；普通编辑不依赖 AI。
-
-### 外观与图片背景
-
-使用原版 UI 时，打开 **设置 → 外观**，可以调整画布、网格、卡片、文字、工具栏、菜单、连接线和开始页颜色。这些配色选项只作用于原版 UI，不会覆盖导入皮肤自己的设计。
-
-画布背景支持 PNG、JPEG 和 WebP。KnotJot 本身不设置文件体积或图片像素尺寸上限。导入图片后会先进入预览，再决定是否应用：
-
-- **不限制画布大小**：按照选择的比例，在工作区中重复平铺图片。
-- **限制画布大小**：建立有边界的工作区，默认从 **6000 × 3600** 开始，画布大小、图片比例和图片位置都可调整。
-- 导入图片后，网格位于图片后方，不会覆盖照片表面。
-- 预览缩放只改变背景的显示比例，空白参考文本框保持稳定的屏幕尺寸。
-- 应用外观后，重新打开设置仍会保留，并成为新建导图的默认背景；当前导图也会把自己的外观写入 `.knotjot` 文件。
-
-### UI 实时编辑
-
-KnotJot 运行时会监听自己的 UI 皮肤库。兼容的 UI 编辑器把皮肤保存到已连接的库后，正在运行的程序可以直接刷新，不需要重启，也不会丢失当前导图、选择、缩放或文字编辑状态。
-
-UI 皮肤和文本框样式使用不同的样式库与作用域，修改其中一个不会覆盖另一个。
-
-### 下载和运行
-
-KnotJot V1.0.0 面向 **Windows x64**。
-
-1. 打开仓库的 **Releases** 页面。
-2. 下载 `KnotJot-Setup-1.0.0.exe`。
-3. 运行安装程序并选择安装位置。
-4. 从桌面或开始菜单启动 KnotJot。
-
-当前版本没有商业代码签名，因此 Windows 可能显示“未知发布者”或 SmartScreen 提示。运行前请确认文件来自官方仓库。
-
-### 数据与隐私
-
-- 导图保存在你选择的位置。
-- 核心编辑在本地完成，不需要账号。
-- UI 皮肤、文本框样式和外观偏好保存在 KnotJot 的本地设置目录中。
-- 只有在你配置并调用 AI 接口时，程序才会使用 API Key。请妥善保管密钥，并了解对应服务商的隐私政策。
-
-### 从源码运行
-
-需要 Node.js 18 或更高版本以及 npm。
-
-```bash
-npm install
-npm start
-```
-
-构建 Windows 版本：
-
-```bash
-npm run dist:win
-```
-
-### 开源许可
-
-KnotJot 采用 **GPL-3.0-only**。允许商业使用，但如果分发修改版，需要遵守 GPL 并提供对应源代码。随程序提供的第三方库和字体继续使用各自的兼容许可证，详情见 [LICENSE](LICENSE) 和 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
