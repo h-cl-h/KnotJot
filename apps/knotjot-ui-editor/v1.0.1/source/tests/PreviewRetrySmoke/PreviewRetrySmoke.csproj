@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Run real WebView2 retry regressions against current source or an explicitly frozen baseline DLL. 通过当前源码或显式冻结基线 DLL 运行真实 WebView2 重试回归。 -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup Condition="'$(UiAuditDll)' == ''"><ProjectReference Include="../../KnotJot.UiEditor.csproj" /></ItemGroup>
+  <ItemGroup Condition="'$(UiAuditDll)' != ''"><Reference Include="KnotJot界面编辑器"><HintPath>$(UiAuditDll)</HintPath></Reference><PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4078.44" /></ItemGroup>
+</Project>

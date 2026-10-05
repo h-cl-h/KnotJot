@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Exercise the production diagnostic-copy button on an STA thread with real clipboard contention.
+       在 STA 线程上使用真实剪贴板占用验证生产诊断复制按钮。 -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../KnotJot.UiEditor.csproj" /></ItemGroup>
+</Project>

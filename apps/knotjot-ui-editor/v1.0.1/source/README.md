@@ -8,10 +8,6 @@ Components you leave undesigned keep their original appearance.
 
 ## English
 
-This branch contains **KnotJot UI Editor V1.0.1**. Other apps: [KnotJot](https://github.com/h-cl-h/KnotJot/tree/main) · [KnotJot UI Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [KnotJot Text Style Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor).
-
-Source is available here. Installer assets are published separately; check the version actually listed on the [Releases page](https://github.com/h-cl-h/KnotJot/releases). Source downloads are not installers.
-
 ### What you can do
 
 - Design nodes, buttons, toolbars, menus and other KnotJot interface components.
@@ -25,18 +21,6 @@ V1.0.1 is based on V1.0.0 and includes fixes to selection, rotated artwork, mask
 Existing project formats and connections remain compatible.
 UI Editor currently uses Chinese control labels; this edition describes their functions in English.
 
-### What is new in V1.0.1
-
-This update builds on V1.0.0. Here are the changes you will notice in everyday use:
-
-- **Select rotated artwork more accurately.** Clicking and dragging now follow the visible shape more closely, and selecting several items is more reliable.
-- **See transparent effects correctly.** Previews better preserve semi-transparent artwork and reversed masks, including rotated designs.
-- **Undo changes across components.** Moving between parts of a skin no longer makes it as easy to lose track of the changes you want to undo or redo.
-- **Retry a blank or failed preview.** Retry reloads the preview properly. If a custom preview page has moved, select it again or return to the built-in preview.
-- **Copy error details without losing your work.** If another app is using the clipboard, the editor stays open and lets you try again instead of closing unexpectedly.
-- **Save and sync with clearer checks.** Problems with a design or destination file are reported before a misleading success message. Saving your project and syncing the skin remain separate actions.
-- **Connect and install more smoothly.** Opening the connected main app is more reliable, and the installer offers English and Chinese. The editor's controls currently use Chinese labels.
-
 ### Download and install
 
 Use the Windows x64 files from the project's release distribution:
@@ -47,7 +31,7 @@ Use the Windows x64 files from the project's release distribution:
 | KnotJot and its companion editors | `KnotJot-Suite-Setup-1.0.1.exe` |
 
 Run the chosen installer, select its language and installation folder, then open **KnotJot UI Editor** from the Start menu or desktop shortcut.
-The installer includes the files needed to run the editor; no developer tools are required.
+The self-contained release includes its .NET runtime; you do not need the .NET SDK to use it.
 **Microsoft Edge WebView2 Runtime** is needed for the browser preview.
 You can still design and save projects when that preview is unavailable.
 
@@ -135,18 +119,14 @@ Legacy `.bmapui` projects remain readable. Open an older project and use **Save 
 ### Development and license
 
 For source builds, tests and implementation notes, see [DEVELOPMENT.md](DEVELOPMENT.md).
-The editor's own code is licensed under **GPL-3.0-only**: see [LICENSE](apps/knotjot-ui-editor/v1.0.1/source/LICENSE).
-Runtime and dependency notices are in [THIRD_PARTY_NOTICES.md](apps/knotjot-ui-editor/v1.0.1/source/THIRD_PARTY_NOTICES.md).
+The editor's own code is licensed under **GPL-3.0-only**: see [LICENSE](LICENSE).
+Runtime and dependency notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ---
 
 <a id="chinese"></a>
 
 ## 中文
-
-本分支是 **界面编辑器 V1.0.1**。三个软件入口：[主程序](https://github.com/h-cl-h/KnotJot/tree/main) · [界面编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [文本框样式编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor)。
-
-本分支提供源码；安装包另行发布，请以 [Releases 页面](https://github.com/h-cl-h/KnotJot/releases)实际列出的版本为准。下载源码不等于下载安装包。
 
 ### 认识 KnotJot 界面编辑器
 
@@ -163,18 +143,6 @@ Runtime and dependency notices are in [THIRD_PARTY_NOTICES.md](apps/knotjot-ui-e
 V1.0.1 完全基于 V1.0.0，包含选择、旋转图稿、蒙版及预览重试等修复，保留既有工程与连接兼容性。
 当前界面编辑器的控件使用中文标签。
 
-### V1.0.1 更新了什么
-
-这次更新基于 V1.0.0，主要改进日常使用中遇到的问题：
-
-- **旋转后的图形更容易选中。** 点击和拖动的位置更贴合看见的图形，多选操作也更可靠。
-- **半透明效果显示更准确。** 修正半透明图稿、反向遮罩以及旋转后的预览效果。
-- **切换部件后也能撤销修改。** 在不同部件之间来回设计时，改进撤销和重做，方便找回前面的操作。
-- **预览出错后可以重新加载。** “重试”会重新打开预览；自定义预览文件移走后，可以重新选择文件，或切回内置预览。
-- **复制错误信息时不再意外关闭。** 其他软件正在使用剪贴板时，编辑器会保留当前工程，并提示稍后重试。
-- **保存和同步提示更清楚。** 设计内容或目标文件有问题时会明确提示，避免误以为操作成功。“保存工程”和“同步皮肤”仍是两件事，需要备份时请记得保存。
-- **连接和安装更顺畅。** 改进从编辑器打开已连接主程序的操作；安装向导可选择中英文。编辑器内的操作按钮目前仍使用中文。
-
 ### 下载与安装
 
 从项目发行文件中选择 Windows x64 安装包：
@@ -185,7 +153,7 @@ V1.0.1 完全基于 V1.0.0，包含选择、旋转图稿、蒙版及预览重试
 | KnotJot 及配套编辑器 | `KnotJot-Suite-Setup-1.0.1.exe` |
 
 运行安装包，选择语言和安装目录，然后从开始菜单或桌面快捷方式打开 **KnotJot UI Editor**。
-安装包已包含软件运行所需的文件，不需要另外安装开发工具。
+自包含发行版带有 .NET 运行时，使用软件不需要安装 .NET SDK。
 浏览器预览需要 **Microsoft Edge WebView2 Runtime**；预览不可用时，仍可在画布中设计并保存工程。
 
 ### 制作第一款皮肤
@@ -262,5 +230,5 @@ UI 皮肤与文本框样式使用不同的库；制作应用到单个文本框�
 ### 开发与许可证
 
 源码构建、测试及实现说明见 [DEVELOPMENT.md](DEVELOPMENT.md)。
-编辑器自有代码采用 **GPL-3.0-only**，完整文本见 [LICENSE](apps/knotjot-ui-editor/v1.0.1/source/LICENSE)。
-运行时及依赖声明见 [THIRD_PARTY_NOTICES.md](apps/knotjot-ui-editor/v1.0.1/source/THIRD_PARTY_NOTICES.md)。
+编辑器自有代码采用 **GPL-3.0-only**，完整文本见 [LICENSE](LICENSE)。
+运行时及依赖声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

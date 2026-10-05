@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Run isolated WPF regression checks against the selected app project.
+       针对所选应用工程运行隔离 WPF 回归检查。 -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <PropertyGroup><UiProject Condition="'$(UiProject)' == ''">../../KnotJot.UiEditor.csproj</UiProject></PropertyGroup>
+  <ItemGroup><ProjectReference Include="$(UiProject)" /></ItemGroup>
+</Project>
