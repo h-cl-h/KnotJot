@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EN: Exercise asynchronous WPF frame integration and owned-browser limits in an isolated process. ZH: 在隔离进程中验证异步 WPF 外框集成及自有浏览器边界。 -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../KnotJot.TextStyleEditor.csproj" /></ItemGroup>
+</Project>

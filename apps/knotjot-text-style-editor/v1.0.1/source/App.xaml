@@ -1,0 +1,3 @@
+<!-- EN: Start the main WPF window; application resources are intentionally empty because window resources own editor styling.
+     ZH: 启动 WPF 主窗口；应用资源为空，编辑器样式由窗口资源管理。 -->
+<Application x:Class="KnotJotTextStyleEditor.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" StartupUri="MainWindow.xaml"><Application.Resources/></Application>

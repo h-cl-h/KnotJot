@@ -1,0 +1,6 @@
+<!-- EN: Compile a Windows WPF smoke executable; referenced production code supplies the real behaviors under test.
+     ZH: 编译 Windows WPF smoke 可执行程序；引用生产代码以检验真实行为。 -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\..\KnotJot.TextStyleEditor.csproj" /></ItemGroup>
+</Project>

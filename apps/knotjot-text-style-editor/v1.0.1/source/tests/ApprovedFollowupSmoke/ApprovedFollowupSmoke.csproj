@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EN: Run isolated WPF behavior and pixel regressions against the maintained editor. ZH: 对维护中的编辑器执行隔离 WPF 行为及像素回归。 -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../KnotJot.TextStyleEditor.csproj" /></ItemGroup>
+</Project>

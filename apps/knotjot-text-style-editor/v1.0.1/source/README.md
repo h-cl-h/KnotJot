@@ -7,33 +7,17 @@ You can work and save files without connecting to the main application.
 
 ## English
 
-This branch contains **KnotJot Text Style Editor V1.0.1**. Other apps: [KnotJot](https://github.com/h-cl-h/KnotJot/tree/main) · [KnotJot UI Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [KnotJot Text Style Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor).
-
-Source is available here. Installer assets are published separately; check the version actually listed on the [Releases page](https://github.com/h-cl-h/KnotJot/releases). Source downloads are not installers.
-
 ### What you can do
 
 - Draw rectangles, rounded rectangles, ellipses and lines, or import images.
 - Arrange decorative layers around one real text-input region.
-- Set fonts, colors, borders, corner rounding and frame shadows.
+- Set fonts, colors, borders, corner rounding and CSS frame shadows.
 - Move, resize, rotate, reorder, hide and lock layers, with snapping and Undo/Redo.
 - Use clipping, alpha or luminance masks, and normal, multiply, screen or overlay blending.
 - Try input rules and fixed-aspect or free-stretch sizing in a separate Preview tab.
 - Save an editable style file, share it, or add styles to a connected KnotJot library.
 
 V1.0.1 is based on V1.0.0, with fixes to layer editing, masks, shadows, history and synchronization. The editor supports English and Chinese; use the language button to switch.
-
-### What is new in V1.0.1
-
-This update builds on V1.0.0. Here are the changes you will notice in everyday use:
-
-- **Locked layers stay protected.** Locking now consistently blocks moving, resizing, deleting, reordering and changing properties, including during group edits.
-- **Undo continuous edits more naturally.** A series of small adjustments is grouped into a useful undo step, with clearer saved and unsaved states.
-- **Save and sync more reliably.** Save & sync saves an associated project file before updating KnotJot. If the second step fails, the successfully saved file stays saved. Editing one style also preserves other styles in the same file.
-- **Keep image effects accurate.** Transparent pictures, rotated designs and masks display more consistently; semi-transparent areas no longer become solid by mistake.
-- **Preview inner and outer shadows.** Frame shadows are shown more accurately. If the preview cannot be generated, a message explains the problem and you can still design and save.
-- **Check the result in the main app.** Together with KnotJot V1.0.1, styles that use transparency or no border display more faithfully on your maps.
-- **Connect and install more smoothly.** Connections to KnotJot are more reliable. The installer offers English and Chinese, and the editor itself can switch between the two languages.
 
 ### Download and install
 
@@ -44,8 +28,8 @@ Choose the Windows x64 file from the project's release distribution:
 | Text Style Editor only | `KnotJot-Text-Style-Editor-Setup-1.0.1.exe` |
 | KnotJot and its companion editors | `KnotJot-Suite-Setup-1.0.1.exe` |
 
-Run the installer, choose its language and installation folder, then open **KnotJot Text Style Editor** from the Start menu or desktop shortcut. The installer includes the files needed to run the editor; no developer tools are required.
-An installed **Microsoft Edge** is needed to render frame shadows in Preview. The design tools and saving remain available when Edge is unavailable.
+Run the installer, choose its language and installation folder, then open **KnotJot Text Style Editor** from the Start menu or desktop shortcut. The self-contained release includes .NET; users do not need the .NET SDK.
+An installed **Microsoft Edge** is needed to render CSS frame shadows in Preview. The design tools and saving remain available when Edge is unavailable.
 
 ### Make your first text-box style
 
@@ -90,7 +74,7 @@ Image transparency, layer opacity and rotation participate in masks. Selection o
 The **Design** tab is for arranging artwork. **Preview** lets you type into the actual text region and try the sizing rules. Choose a fixed aspect ratio when the artwork should keep its proportions, or free stretch when width and height should adapt separately.
 Input rules can limit character count, allowed character types or empty values; advanced rules can use a regular expression. Test both an allowed value and a value that should be rejected before sharing a restricted style.
 
-frame shadows can include inner and outer shadows. Edge renders them when the Preview tab is selected. When a composite design replaces the ordinary outer frame, its ordinary frame shadow is hidden.
+CSS frame shadows can include inner and outer shadows. Edge renders them when the Preview tab is selected. When a composite design replaces the ordinary outer frame, its ordinary frame shadow is hidden.
 Preview uses a default frame environment, so theme-dependent colors or relative sizes can differ in the main app; check the applied style there too. If Edge is unavailable or a render fails, read the status beside the shadow field. You can return to Design and save your work.
 
 ### Save, sync and share
@@ -130,18 +114,14 @@ UI skins belong to **KnotJot UI Editor** and use a separate library from these t
 ### Development and license
 
 See [DEVELOPMENT.md](DEVELOPMENT.md) for source builds, tests and implementation notes.
-The editor's own code is licensed under **GPL-3.0-only**: see [LICENSE](apps/knotjot-text-style-editor/v1.0.1/source/LICENSE).
-Runtime and third-party notices are in [THIRD_PARTY_NOTICES.md](apps/knotjot-text-style-editor/v1.0.1/source/THIRD_PARTY_NOTICES.md).
+The editor's own code is licensed under **GPL-3.0-only**: see [LICENSE](LICENSE).
+Runtime and third-party notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ---
 
 <a id="chinese"></a>
 
 ## 中文
-
-本分支是 **文本框样式编辑器 V1.0.1**。三个软件入口：[主程序](https://github.com/h-cl-h/KnotJot/tree/main) · [界面编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [文本框样式编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor)。
-
-本分支提供源码；安装包另行发布，请以 [Releases 页面](https://github.com/h-cl-h/KnotJot/releases)实际列出的版本为准。下载源码不等于下载安装包。
 
 ### 认识 KnotJot 文本框样式编辑器
 
@@ -150,7 +130,7 @@ Runtime and third-party notices are in [THIRD_PARTY_NOTICES.md](apps/knotjot-tex
 
 - 绘制矩形、圆角矩形、椭圆、直线，或导入图片。
 - 围绕一个真正的文字输入区域安排装饰图层。
-- 设置字体、颜色、边框、圆角及 外框阴影。
+- 设置字体、颜色、边框、圆角及 CSS 外框阴影。
 - 移动、缩放、旋转、排序、隐藏和锁定图层，配合磁吸及撤销重做。
 - 使用剪切、透明度或亮度蒙版，以及正常、正片叠底、滤色和叠加混合。
 - 在独立预览中测试输入规则、固定长宽比或自由拉伸。
@@ -158,18 +138,6 @@ Runtime and third-party notices are in [THIRD_PARTY_NOTICES.md](apps/knotjot-tex
 
 V1.0.1 完全基于 V1.0.0，修复了图层编辑、蒙版、阴影、历史记录及同步等问题。
 编辑器支持中英文，可用语言按钮切换。
-
-### V1.0.1 更新了什么
-
-这次更新基于 V1.0.0，主要改进日常使用中遇到的问题：
-
-- **锁定后不容易误改。** 图层锁定后，移动、缩放、删除、调整前后顺序和修改属性都会受到保护，多选操作也会遵守锁定状态。
-- **连续调整更方便撤销。** 一连串小幅修改会整理成便于撤销的一步，已保存和未保存的状态也更清楚。
-- **保存和同步更可靠。** 已关联工程文件时，“保存并同步”先保存文件，再更新主程序；同步失败不会把已成功保存的文件误报成未保存。修改文件中的一个样式时，也会保留其他样式。
-- **图片和透明效果更准确。** 修正透明图片、旋转图稿及遮罩的显示，避免半透明区域错误地变成完全不透明。
-- **内外阴影预览更接近实际。** 改进外框阴影显示；无法生成预览时会说明原因，仍可继续设计和保存。
-- **应用到导图后更接近设计效果。** 配合 KnotJot V1.0.1，透明效果及“不显示边框”的样式能更准确地显示在导图上。
-- **连接和安装更顺畅。** 改进与主程序的连接；安装向导可以选择中英文，编辑器内也可以切换两种语言。
 
 ### 下载与安装
 
@@ -181,8 +149,8 @@ V1.0.1 完全基于 V1.0.0，修复了图层编辑、蒙版、阴影、历史记
 | KnotJot 及配套编辑器 | `KnotJot-Suite-Setup-1.0.1.exe` |
 
 运行安装包，选择语言和安装目录，然后从开始菜单或桌面快捷方式打开 **KnotJot Text Style Editor**。
-安装包已包含软件运行所需的文件，不需要另外安装开发工具。
-预览中的 外框阴影需要已安装的 **Microsoft Edge**；Edge 不可用时，仍可使用设计工具并保存文件。
+自包含发行版带有 .NET，使用时不需要安装 .NET SDK。
+预览中的 CSS 外框阴影需要已安装的 **Microsoft Edge**；Edge 不可用时，仍可使用设计工具并保存文件。
 
 ### 制作第一个文本框样式
 
@@ -227,7 +195,7 @@ V1.0.1 完全基于 V1.0.0，修复了图层编辑、蒙版、阴影、历史记
 希望保持图稿比例时选择固定长宽比；希望宽高分别适应时选择自由拉伸。
 输入规则可以限制字符数量、类型和空值，也可使用自定义正则表达式。分享受限样式前，请分别试验应接受和应拒绝的内容。
 
-外框阴影支持内阴影和外阴影，选中预览页时由 Edge 渲染；组合设计替换普通外框时，普通外框阴影会隐藏。
+CSS 外框阴影支持内阴影和外阴影，选中预览页时由 Edge 渲染；组合设计替换普通外框时，普通外框阴影会隐藏。
 预览使用默认外框环境，主题相关颜色或相对尺寸可能与主程序不同，应用后还应检查实际效果。
 Edge 不可用或渲染失败时，查看阴影字段旁的状态；仍可返回设计页并保存。
 
@@ -265,5 +233,5 @@ UI 皮肤由 **KnotJot UI Editor** 制作，与文本框样式使用不同的库
 ### 开发与许可证
 
 源码构建、测试及实现说明见 [DEVELOPMENT.md](DEVELOPMENT.md)。
-编辑器自有代码采用 **GPL-3.0-only**，完整文本见 [LICENSE](apps/knotjot-text-style-editor/v1.0.1/source/LICENSE)。
-运行时及第三方声明见 [THIRD_PARTY_NOTICES.md](apps/knotjot-text-style-editor/v1.0.1/source/THIRD_PARTY_NOTICES.md)。
+编辑器自有代码采用 **GPL-3.0-only**，完整文本见 [LICENSE](LICENSE)。
+运行时及第三方声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

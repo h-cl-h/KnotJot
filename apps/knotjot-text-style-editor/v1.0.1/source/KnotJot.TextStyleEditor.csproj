@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<!-- EN: Build the WPF application with stable assembly/namespace identity despite the normalized project filename.
+     ZH: 项目文件名规范化后，WPF 程序仍保留稳定程序集及命名空间身份。 -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>KnotJot文本框样式编辑器</AssemblyName>
+    <RootNamespace>KnotJotTextStyleEditor</RootNamespace>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Authors>happymore</Authors>
+    <Description>KnotJot Text Style Editor</Description>
+    <Product>KnotJot Text Style Editor</Product>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <ApplicationIcon>assets\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <!-- EN: Exclude debug symbols and local source paths from release binaries while keeping debug builds available for development.
+       ZH: 发行构建不包含调试符号及本地源码路径，同时保留开发调试构建。 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+<!-- EN: Embed the application icon for the executable and WPF resources.
+     ZH: 为程序和 WPF 资源嵌入应用图标。 -->
+  <ItemGroup><Resource Include="assets\icon.ico" /></ItemGroup>
+<!-- EN: Exclude smoke entry points from the application compilation.
+     ZH: 从主程序编译中排除 smoke 测试入口。 -->
+  <ItemGroup><Compile Remove="tests\**\*.cs" /></ItemGroup>
+  <!-- EN: Keep offline user and development guides outside the single-file bundle so repeated publishes retain the installer documentation.
+       ZH: 将离线用户及开发指南保留在单文件程序之外，使重复发布仍保留安装器文档。 -->
+  <ItemGroup>
+    <None Update="README.md" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <None Update="DEVELOPMENT.md" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+</Project>

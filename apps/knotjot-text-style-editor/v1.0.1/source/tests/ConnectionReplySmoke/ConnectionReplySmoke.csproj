@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EN: Verify lock timing against either the frozen connection reader or the current repair. ZH: 对冻结连接读取或当前修复验证文件锁时序。 -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EditorProject Condition="'$(EditorProject)' == ''">../../KnotJot.TextStyleEditor.csproj</EditorProject></PropertyGroup>
+  <ItemGroup><ProjectReference Include="$(EditorProject)" /></ItemGroup>
+</Project>
