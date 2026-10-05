@@ -1,0 +1,13 @@
+[
+  { "name": "ascii length", "text": "ABC", "rules": { "type": "any", "maxLength": 3 }, "allowed": true },
+  { "name": "emoji is one code point", "text": "😀", "rules": { "type": "any", "maxLength": 1 }, "allowed": true },
+  { "name": "two emoji exceed one", "text": "😀😀", "rules": { "type": "any", "maxLength": 1 }, "allowed": false },
+  { "name": "combining mark uses two code points", "text": "é", "rules": { "type": "any", "maxLength": 1 }, "allowed": false },
+  { "name": "han", "text": "中文", "rules": { "type": "chinese", "maxLength": 0 }, "allowed": true },
+  { "name": "newline rejected by alnum", "text": "A\n1", "rules": { "type": "alnum", "maxLength": 0 }, "allowed": false },
+  { "name": "regex whole match", "text": "123", "rules": { "type": "regex", "pattern": "[0-9]+", "maxLength": 0 }, "allowed": true },
+  { "name": "regex partial match rejected", "text": "123x", "rules": { "type": "regex", "pattern": "[0-9]+", "maxLength": 0 }, "allowed": false },
+  { "name": "invalid regex rejected", "text": "anything", "rules": { "type": "regex", "pattern": "[", "maxLength": 0 }, "allowed": false },
+  { "name": "empty permitted", "text": "", "rules": { "type": "any", "required": false }, "allowed": true, "complete": true },
+  { "name": "required empty incomplete", "text": "", "rules": { "type": "any", "required": true }, "allowed": true, "complete": false }
+]

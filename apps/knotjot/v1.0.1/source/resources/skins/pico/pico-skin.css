@@ -1,0 +1,207 @@
+/* ===== Pico.css 皮肤层 · 简洁语义风 ===== */
+/* 在 ui-theme.css(含功能性修正)之后加载;保留元素 id 与功能 */
+/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{
+  --accent:#0172ad!important; --accent-soft:#e1f0f8!important;
+  --card-border:#dfe3eb!important; --ink:#373c44!important; --muted:#646b79!important; --brace:#a6adba!important;
+}
+/* EN: Style html,body: text presentation, color and surface styling.
+   ZH: 设置 html,body：文字显示、颜色与表面样式。 */
+html,body{font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",Roboto,sans-serif!important; color:#373c44!important; background:#fbfcfd!important;}
+
+/* 工具栏 */
+/* EN: Style #toolbar: placement and layout, sizing and spacing, color and surface styling.
+   ZH: 设置 #toolbar：位置与布局、尺寸与间距、颜色与表面样式。 */
+#toolbar{height:54px!important; background:#fff!important; backdrop-filter:none!important; border:none!important; border-bottom:1px solid #e7eaf0!important; gap:7px!important; padding:0 16px!important;}
+/* EN: Style #toolbar .title: text presentation, color and surface styling.
+   ZH: 设置 #toolbar .title：文字显示、颜色与表面样式。 */
+#toolbar .title{font-weight:600!important; color:#373c44!important; font-size:14px!important;}
+/* EN: Style #toolbar .title:hover: color and surface styling.
+   ZH: 设置 #toolbar .title:hover：颜色与表面样式。 */
+#toolbar .title:hover{color:#0172ad!important;}
+/* EN: Style #toolbar .title .dot: color and surface styling.
+   ZH: 设置 #toolbar .title .dot：颜色与表面样式。 */
+#toolbar .title .dot{background:#0172ad!important; box-shadow:none!important;}
+/* EN: Style #hint: text presentation, color and surface styling.
+   ZH: 设置 #hint：文字显示、颜色与表面样式。 */
+#hint{color:#8b919c!important; font-size:12px!important;}
+/* EN: Style .vsep: sizing and spacing, color and surface styling.
+   ZH: 设置 .vsep：尺寸与间距、颜色与表面样式。 */
+.vsep{background:#e7eaf0!important; height:22px!important;}
+
+/* 按钮:Pico 实心圆角(默认=secondary 板岩,主操作=primary 蓝) */
+/* EN: Style .btn: sizing and spacing, text presentation, color and surface styling, visual state and motion.
+   ZH: 设置 .btn：尺寸与间距、文字显示、颜色与表面样式、视觉状态与动效。 */
+.btn{
+  height:auto!important; min-height:34px!important; padding:7px 15px!important; font-size:13px!important; border-radius:6px!important;
+  color:#fff!important; border:1px solid #5d6b89!important; background:#5d6b89!important; box-shadow:none!important; transition:background .12s!important; font-weight:500!important;
+}
+/* EN: Style .btn:hover: color and surface styling.
+   ZH: 设置 .btn:hover：颜色与表面样式。 */
+.btn:hover{background:#48536b!important; border-color:#48536b!important; color:#fff!important;}
+/* EN: Style .btn .caret: visual state and motion.
+   ZH: 设置 .btn .caret：视觉状态与动效。 */
+.btn .caret{opacity:.8!important;}
+/* EN: Style .btn.primary,.btn.toggle-on,.btn.on: color and surface styling.
+   ZH: 设置 .btn.primary,.btn.toggle-on,.btn.on：颜色与表面样式。 */
+.btn.primary,.btn.toggle-on,.btn.on{background:#0172ad!important; border-color:#0172ad!important; color:#fff!important;}
+/* EN: Style .btn.primary:hover,.btn.toggle-on:hover: color and surface styling, visual state and motion.
+   ZH: 设置 .btn.primary:hover,.btn.toggle-on:hover：颜色与表面样式、视觉状态与动效。 */
+.btn.primary:hover,.btn.toggle-on:hover{background:#017fc0!important; border-color:#017fc0!important; color:#fff!important; filter:none!important;}
+/* EN: Style .btn.ghost: color and surface styling.
+   ZH: 设置 .btn.ghost：颜色与表面样式。 */
+.btn.ghost{background:transparent!important; border-color:transparent!important; color:#5d6b89!important;}
+/* EN: Style .btn.ghost:hover: color and surface styling.
+   ZH: 设置 .btn.ghost:hover：颜色与表面样式。 */
+.btn.ghost:hover{background:#eef0f4!important; color:#0172ad!important;}
+/* EN: Style .btn.icon: color and surface styling.
+   ZH: 设置 .btn.icon：颜色与表面样式。 */
+.btn.icon{color:#fff!important;}
+/* EN: Style .btn:disabled,.btn:disabled:hover: visual state and motion.
+   ZH: 设置 .btn:disabled,.btn:disabled:hover：视觉状态与动效。 */
+.btn:disabled,.btn:disabled:hover{opacity:.5!important;}
+
+/* 文件名 */
+/* EN: Style .fname: sizing and spacing, color and surface styling.
+   ZH: 设置 .fname：尺寸与间距、颜色与表面样式。 */
+.fname{background:#fff!important; color:#373c44!important; border:1px solid #cfd5df!important; border-radius:6px!important; box-shadow:none!important; padding:5px 9px!important;}
+/* EN: Style .fname:hover: color and surface styling.
+   ZH: 设置 .fname:hover：颜色与表面样式。 */
+.fname:hover{background:#fff!important; border-color:#0172ad!important;}
+
+/* 画布 */
+/* EN: Style #canvas: color and surface styling.
+   ZH: 设置 #canvas：颜色与表面样式。 */
+#canvas{background:#fbfcfd!important;}
+/* EN: Style #world: color and surface styling.
+   ZH: 设置 #world：颜色与表面样式。 */
+#world{background-image:linear-gradient(#eef1f5 1px,transparent 1px),linear-gradient(90deg,#eef1f5 1px,transparent 1px)!important;}
+/* EN: Style .brace-path,.brace-stub,.link-line: color and surface styling.
+   ZH: 设置 .brace-path,.brace-stub,.link-line：颜色与表面样式。 */
+.brace-path,.brace-stub,.link-line{stroke:#9aa1ad!important;}
+/* EN: Style .anchor: color and surface styling.
+   ZH: 设置 .anchor：颜色与表面样式。 */
+.anchor{fill:#fff!important; stroke:#0172ad!important;}
+
+/* 卡片(不动 display) */
+/* EN: Style #nodes .card: color and surface styling, visual state and motion.
+   ZH: 设置 #nodes .card：颜色与表面样式、视觉状态与动效。 */
+#nodes .card{border:1px solid #dfe3eb!important; border-radius:10px!important; box-shadow:0 1px 3px rgba(27,40,80,.07)!important; background:#fff!important; animation:none!important;}
+/* EN: Style #nodes .card:hover: color and surface styling.
+   ZH: 设置 #nodes .card:hover：颜色与表面样式。 */
+#nodes .card:hover{box-shadow:0 3px 10px rgba(27,40,80,.10)!important;}
+/* EN: Style .node.sel .card: color and surface styling.
+   ZH: 设置 .node.sel .card：颜色与表面样式。 */
+.node.sel .card{border-color:#0172ad!important; box-shadow:0 0 0 3px rgba(1,114,173,.2)!important;}
+/* EN: Style .card-inner: color and surface styling.
+   ZH: 设置 .card-inner：颜色与表面样式。 */
+.card-inner{color:#373c44!important;}
+
+/* 菜单 */
+/* EN: Style .popmenu,#ctx: color and surface styling.
+   ZH: 设置 .popmenu,#ctx：颜色与表面样式。 */
+.popmenu,#ctx{background:#fff!important; border:1px solid #dfe3eb!important; border-radius:10px!important; box-shadow:0 8px 24px rgba(27,40,80,.14)!important; color:#373c44!important;}
+/* EN: Style .mi,#ctx .item: color and surface styling.
+   ZH: 设置 .mi,#ctx .item：颜色与表面样式。 */
+.mi,#ctx .item{color:#373c44!important; border-radius:6px!important;}
+/* EN: Style .mi:hover,.mi.active,#ctx .item:hover: color and surface styling.
+   ZH: 设置 .mi:hover,.mi.active,#ctx .item:hover：颜色与表面样式。 */
+.mi:hover,.mi.active,#ctx .item:hover{background:#0172ad!important; color:#fff!important;}
+/* EN: Style .mi .sk,.mi .arrow,.mi:hover .sk,.mi:hover .arrow,.mi .chk: color and surface styling.
+   ZH: 设置 .mi .sk,.mi .arrow,.mi:hover .sk,.mi:hover .arrow,.mi .chk：颜色与表面样式。 */
+.mi .sk,.mi .arrow,.mi:hover .sk,.mi:hover .arrow,.mi .chk{color:inherit!important;}
+/* EN: Style #ctx .item.danger:hover: color and surface styling.
+   ZH: 设置 #ctx .item.danger:hover：颜色与表面样式。 */
+#ctx .item.danger:hover{background:#d93526!important; color:#fff!important;}
+/* EN: Style .msep,.sep,#ctx .sep: color and surface styling.
+   ZH: 设置 .msep,.sep,#ctx .sep：颜色与表面样式。 */
+.msep,.sep,#ctx .sep{background:#eceef2!important;}
+
+/* 操作条 */
+/* EN: Style .actions,#floatBar: color and surface styling.
+   ZH: 设置 .actions,#floatBar：颜色与表面样式。 */
+.actions,#floatBar{background:#fff!important; border:1px solid #dfe3eb!important; border-radius:10px!important; box-shadow:0 4px 14px rgba(27,40,80,.13)!important;}
+/* EN: Style .act: color and surface styling.
+   ZH: 设置 .act：颜色与表面样式。 */
+.act{color:#5d6b89!important;}
+/* EN: Style .act:hover: color and surface styling.
+   ZH: 设置 .act:hover：颜色与表面样式。 */
+.act:hover{background:#0172ad!important; color:#fff!important;}
+/* EN: Style .act.del:hover: color and surface styling.
+   ZH: 设置 .act.del:hover：颜色与表面样式。 */
+.act.del:hover{background:#d93526!important; color:#fff!important;}
+/* EN: Style .act.on: color and surface styling.
+   ZH: 设置 .act.on：颜色与表面样式。 */
+.act.on{background:#0172ad!important; color:#fff!important;}
+
+/* 设置对话框 */
+/* EN: Style #settingsMask: color and surface styling.
+   ZH: 设置 #settingsMask：颜色与表面样式。 */
+#settingsMask{background:rgba(27,40,80,.28)!important; backdrop-filter:none!important;}
+/* EN: Style #settingsBox: color and surface styling.
+   ZH: 设置 #settingsBox：颜色与表面样式。 */
+#settingsBox{background:#fff!important; border:1px solid #dfe3eb!important; border-radius:12px!important; box-shadow:0 16px 48px rgba(27,40,80,.24)!important; color:#373c44!important;}
+/* EN: Style #settingsBox .set-title: text presentation, color and surface styling.
+   ZH: 设置 #settingsBox .set-title：文字显示、颜色与表面样式。 */
+#settingsBox .set-title{color:#373c44!important; font-weight:600!important;}
+/* EN: Style #settingsBox .set-label,#settingsBox .set-hint: color and surface styling.
+   ZH: 设置 #settingsBox .set-label,#settingsBox .set-hint：颜色与表面样式。 */
+#settingsBox .set-label,#settingsBox .set-hint{color:#454b54!important;} /* EN: Style #settingsBox .set-hint: color and surface styling.
+   ZH: 设置 #settingsBox .set-hint：颜色与表面样式。 */
+#settingsBox .set-hint{color:#8b919c!important;}
+/* EN: Style .set-sec: color and surface styling.
+   ZH: 设置 .set-sec：颜色与表面样式。 */
+.set-sec{color:#0172ad!important;}
+/* EN: Style .scheme-toggle: color and surface styling.
+   ZH: 设置 .scheme-toggle：颜色与表面样式。 */
+.scheme-toggle{color:#0172ad!important;}
+/* EN: Style .scheme-preview: color and surface styling.
+   ZH: 设置 .scheme-preview：颜色与表面样式。 */
+.scheme-preview{border:1px solid #dfe3eb!important; border-radius:10px!important;}
+/* EN: Style .scheme-preview .pv-btn,.scheme-preview .pv-chip: color and surface styling.
+   ZH: 设置 .scheme-preview .pv-btn,.scheme-preview .pv-chip：颜色与表面样式。 */
+.scheme-preview .pv-btn,.scheme-preview .pv-chip{border-radius:6px!important;}
+/* EN: Style .scheme-preview .pv-cards span: color and surface styling.
+   ZH: 设置 .scheme-preview .pv-cards span：颜色与表面样式。 */
+.scheme-preview .pv-cards span{border-radius:6px!important;}
+/* EN: Style .scheme-preview .pv-name: color and surface styling.
+   ZH: 设置 .scheme-preview .pv-name：颜色与表面样式。 */
+.scheme-preview .pv-name{color:#8b919c!important;}
+/* EN: Style .scheme-drop: color and surface styling.
+   ZH: 设置 .scheme-drop：颜色与表面样式。 */
+.scheme-drop{border-radius:10px!important; border:1px dashed #cfd5df!important; color:#8b919c!important;}
+
+/* 颜色面板 */
+/* EN: Style #colorPanel: color and surface styling.
+   ZH: 设置 #colorPanel：颜色与表面样式。 */
+#colorPanel{background:#fff!important; border:1px solid #dfe3eb!important; border-radius:11px!important; box-shadow:0 10px 28px rgba(27,40,80,.18)!important; color:#373c44!important;}
+
+/* 开始页 */
+/* EN: Style .start-side: color and surface styling.
+   ZH: 设置 .start-side：颜色与表面样式。 */
+.start-side{background:linear-gradient(160deg,#0172ad,#014f78)!important;}
+/* EN: Style .side-btn: color and surface styling.
+   ZH: 设置 .side-btn：颜色与表面样式。 */
+.side-btn{background:rgba(255,255,255,.16)!important; color:#fff!important; border:1px solid rgba(255,255,255,.45)!important; border-radius:6px!important;}
+/* EN: Style .start-main: color and surface styling.
+   ZH: 设置 .start-main：颜色与表面样式。 */
+.start-main{background:#fbfcfd!important;}
+/* EN: Style .newcard: color and surface styling.
+   ZH: 设置 .newcard：颜色与表面样式。 */
+.newcard{background:#fff!important; border:1px solid #e2e6ee!important; border-radius:12px!important; box-shadow:0 1px 4px rgba(27,40,80,.06)!important;}
+/* EN: Style .newcard:hover: color and surface styling.
+   ZH: 设置 .newcard:hover：颜色与表面样式。 */
+.newcard:hover{border-color:#0172ad!important; box-shadow:0 5px 16px rgba(1,114,173,.16)!important;}
+/* EN: Style .nc-s: color and surface styling.
+   ZH: 设置 .nc-s：颜色与表面样式。 */
+.nc-s{color:#8b919c!important;}
+
+/* EN: Style #empty .l1: color and surface styling.
+   ZH: 设置 #empty .l1：颜色与表面样式。 */
+#empty .l1{color:#454b54!important;} /* EN: Style #empty .l2: color and surface styling.
+   ZH: 设置 #empty .l2：颜色与表面样式。 */
+#empty .l2{color:#8b919c!important;}
+/* EN: Style #readBadge: color and surface styling.
+   ZH: 设置 #readBadge：颜色与表面样式。 */
+#readBadge{background:rgba(55,60,68,.92)!important; border-radius:9px!important;}

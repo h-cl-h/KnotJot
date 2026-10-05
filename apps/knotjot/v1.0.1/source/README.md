@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="apps/knotjot/v1.0.1/source/resources/icons/icon-256.png" width="120" alt="KnotJot">
+  <img src="resources/icons/icon-256.png" width="120" alt="KnotJot">
   <h1>KnotJot V1.0.1</h1>
   <p><b>Turn ideas into maps, plans, and visual notes.</b></p>
 </div>
@@ -8,31 +8,11 @@
 
 ## English
 
-This branch contains **KnotJot V1.0.1**. Other apps: [KnotJot](https://github.com/h-cl-h/KnotJot/tree/main) · [KnotJot UI Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [KnotJot Text Style Editor](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor).
-
-Source is available here. Installer assets are published separately; check the version actually listed on the [Releases page](https://github.com/h-cl-h/KnotJot/releases). Source downloads are not installers.
-
 ### Meet KnotJot
 
 KnotJot is a free, open-source mind-mapping app for Windows. Collect ideas, organize projects, and keep visual notes in a workspace you can make your own. Core editing works locally without an account. Save maps as `.knotjot` files wherever you choose; existing `.bmap` maps can still be opened.
 
 V1.0.1 builds on V1.0.0, improving everyday editing, per-sheet backgrounds, images, layouts, and the two companion editors.
-
-### What is new in V1.0.1
-
-This update builds on V1.0.0. Here are the changes you will notice in everyday use:
-
-- **Move and edit more easily.** Drag several selected topics together. Copy and Cut are now available in topic menus, and pasting content is more reliable. Adding or selecting topics after zooming now follows the mouse position correctly.
-- **Give each sheet its own background.** Change its color or picture beside the sheet tabs. Background previews keep the right proportions, and a new background picture fits a limited canvas automatically.
-- **Keep pictures clear.** Inserted pictures retain their original image data; resize their appearance on the map without replacing the original image.
-- **Keep layouts easier to read.** Switch between brace and spider-web structures more reliably. Timeline items avoid overlapping, and deeper matrix items stay inside their parent box.
-- **Edit your annotations.** Change, move or delete callouts and boundary titles. An empty boundary title disappears while the boundary remains, and unwanted boundaries can be deleted.
-- **Keep controls and labels visible.** Menus and drag handles are less likely to be covered. Markers and note icons sit before the text, topics no longer keep floating, and locking a topic keeps its usual appearance.
-- **Finish related to-dos together.** Completing a parent can complete its child to-dos. Turn this off in Settings → General if you want to tick them off separately.
-- **Find content and recover work.** Fit All Content brings the map back into view. Recovery copies and saved undo history help you continue after an interrupted session; both can be turned off in General settings.
-- **Apply custom styles more accurately.** Semi-transparent and reversed masks now display correctly. Choosing no border no longer leaves an unwanted thin line.
-- **Set up AI with clearer guidance.** Fetch the available model list without typing a model name first, then select one. Switching services updates the displayed address, and failed requests give clearer next steps. AI still requires an available service and any key it needs.
-- **Install in English or Chinese.** The installers offer both languages, and installed apps use their English product names. New summary creation has been removed; summaries in older maps can still be read.
 
 ### Download and install
 
@@ -110,37 +90,17 @@ Core editing is local. AI requests go to your configured endpoint when you use A
 
 Report reproducible problems on [Issues](https://github.com/h-cl-h/KnotJot/issues), including the app version and steps. Remove personal content from sample files.
 
-KnotJot is licensed under **GPL-3.0-only**. See [LICENSE](apps/knotjot/v1.0.1/source/LICENSE) and [third-party notices](apps/knotjot/v1.0.1/source/THIRD_PARTY_NOTICES.md). Building and contributing are covered in [DEVELOPMENT.md](DEVELOPMENT.md).
+KnotJot is licensed under **GPL-3.0-only**. See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md). Building and contributing are covered in [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ---
 
 ## 中文
-
-本分支是 **主程序 V1.0.1**。三个软件入口：[主程序](https://github.com/h-cl-h/KnotJot/tree/main) · [界面编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-ui-editor) · [文本框样式编辑器](https://github.com/h-cl-h/KnotJot/tree/knotjot-text-style-editor)。
-
-本分支提供源码；安装包另行发布，请以 [Releases 页面](https://github.com/h-cl-h/KnotJot/releases)实际列出的版本为准。下载源码不等于下载安装包。
 
 ### 认识 KnotJot
 
 KnotJot 是一款免费、开源的 Windows 思维导图工具。你可以用它收集想法、梳理项目，或制作可视化笔记，并按自己的习惯调整工作区。核心编辑在本地完成，不需要账号。导图以 `.knotjot` 文件保存在你选择的位置，已有的 `.bmap` 导图仍可打开。
 
 V1.0.1 基于 V1.0.0 改进了日常编辑、逐画布背景、图片、布局及两个配套编辑器。
-
-### V1.0.1 更新了什么
-
-这次更新基于 V1.0.0，主要改进日常使用中遇到的问题：
-
-- **移动和编辑更顺手。** 框选多个文本框后可以一起拖动；菜单里增加了复制、剪切入口，粘贴也更稳定。修正缩放后双击添加、框选位置与鼠标对不上的问题。
-- **每张导图都能单独设置背景。** 在底部画布标签旁修改底色或图片；预览时背景与文本框保持正确比例，导入背景图片后会自动适配有限画布。
-- **图片保留原来的清晰度。** 插入图片时保留原始数据，可以调整在导图中的显示大小，不会用缩小后的图片替换原图。
-- **排版更整齐。** 改进大括号与蜘蛛网结构切换；时间轴项目避免互相重叠，矩阵中的下级内容放在对应上级的框内。
-- **标注和外框可以继续修改。** 支持修改、移动、删除标注和外框标题；清空外框标题后只保留框，不需要的外框也能删除。
-- **文字和操作按钮更清楚。** 减少菜单、拖动点被挡住的情况；标记和备注图标放在文字前；文本框不再持续浮动，锁定后也保持原来的外观。
-- **相关待办可以一起完成。** 勾选上级待办时，可以自动完成下级待办；想逐个勾选，可在“设置 → 通用”里关闭。
-- **更容易找回内容和继续编辑。** “适配全部内容”把导图带回画面；意外中断后可使用恢复副本，并保留撤销记录。这两项都可以在通用设置中关闭。
-- **自定义样式显示更准确。** 修正半透明和反向遮罩显示不对的问题；选择不显示边框时，不再多出一条细线。
-- **AI 设置和错误提示更明白。** 不用先填模型名，就能获取服务提供的模型列表，再从中选择。切换服务会更新显示的地址，请求失败时给出更清楚的处理建议。使用 AI 仍需要可用的服务及它要求的密钥。
-- **安装时可以选择中英文。** 安装后的软件使用英文产品名。已去掉“添加概要”，旧导图里的概要仍可查看。
 
 ### 下载与安装
 
@@ -218,4 +178,4 @@ V1.0.1 基于 V1.0.0 改进了日常编辑、逐画布背景、图片、布局�
 
 可通过[问题反馈](https://github.com/h-cl-h/KnotJot/issues)提供程序版本及复现步骤；提交示例文件前，先移除私人内容。
 
-KnotJot 采用 **GPL-3.0-only**，见 [LICENSE](apps/knotjot/v1.0.1/source/LICENSE) 和[第三方声明](apps/knotjot/v1.0.1/source/THIRD_PARTY_NOTICES.md)。构建或参与开发请阅读 [DEVELOPMENT.md](DEVELOPMENT.md)。
+KnotJot 采用 **GPL-3.0-only**，见 [LICENSE](LICENSE) 和[第三方声明](THIRD_PARTY_NOTICES.md)。构建或参与开发请阅读 [DEVELOPMENT.md](DEVELOPMENT.md)。

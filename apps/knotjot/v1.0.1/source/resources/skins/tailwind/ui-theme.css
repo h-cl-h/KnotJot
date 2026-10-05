@@ -1,0 +1,45 @@
+/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{ --accent:#6366f1; --accent-soft:#e8e8fd; --bg:#f6f6fb; }
+/* EN: Style #nodes .card: placement and layout, sizing and spacing, color and surface styling.
+   ZH: 设置 #nodes .card：位置与布局、尺寸与间距、颜色与表面样式。 */
+#nodes .card{display:block!important;flex-direction:initial!important;min-width:0!important;width:max-content!important;background:var(--card)!important;border:1.5px solid var(--card-border)!important;border-radius:12px!important;box-shadow:var(--shadow)!important;}
+/* EN: Style #nodes .card-inner: sizing and spacing.
+   ZH: 设置 #nodes .card-inner：尺寸与间距。 */
+#nodes .card-inner{width:max-content!important;}
+/* EN: Style .actions,#floatBar: sizing and spacing.
+   ZH: 设置 .actions,#floatBar：尺寸与间距。 */
+.actions,#floatBar{padding:4px!important;}
+/* EN: Style .actions .act,#floatBar .act: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .actions .act,#floatBar .act：尺寸与间距、文字显示、颜色与表面样式。 */
+.actions .act,#floatBar .act{width:30px!important;height:28px!important;min-height:0!important;padding:0!important;margin:0!important;border:none!important;background:transparent!important;border-radius:7px!important;font-size:14px!important;line-height:1!important;box-shadow:none!important;}
+/* EN: Style .act.wide: sizing and spacing.
+   ZH: 设置 .act.wide：尺寸与间距。 */
+.act.wide{width:auto!important;padding:0 8px!important;}
+/* EN: Style .popmenu .mi,#ctx .item: sizing and spacing.
+   ZH: 设置 .popmenu .mi,#ctx .item：尺寸与间距。 */
+.popmenu .mi,#ctx .item{min-height:0!important;}
+/* EN: Style .btn: color and surface styling.
+   ZH: 设置 .btn：颜色与表面样式。 */
+.btn{border-radius:14px!important;}
+/* EN: Style body: text presentation.
+   ZH: 设置 body：文字显示。 */
+body{font-family:Inter,system-ui!important;}
+/* EN: Style .start-side: color and surface styling.
+   ZH: 设置 .start-side：颜色与表面样式。 */
+.start-side{background:linear-gradient(160deg,#6366f1,#8b5cf6)!important;}
+/* EN: Style .nc-thumb.blank: color and surface styling.
+   ZH: 设置 .nc-thumb.blank：颜色与表面样式。 */
+.nc-thumb.blank{background:linear-gradient(135deg,#6366f1,#818cf8)!important;}
+/* EN: Style .nc-thumb.sample: color and surface styling.
+   ZH: 设置 .nc-thumb.sample：颜色与表面样式。 */
+.nc-thumb.sample{background:linear-gradient(135deg,#8b5cf6,#6366f1)!important;}
+/* EN: Style .nc-thumb.open: color and surface styling.
+   ZH: 设置 .nc-thumb.open：颜色与表面样式。 */
+.nc-thumb.open{background:linear-gradient(135deg,#10b981,#059669)!important;}
+/* EN: Style .newcard:hover: color and surface styling.
+   ZH: 设置 .newcard:hover：颜色与表面样式。 */
+.newcard:hover{border-color:#6366f1!important;}
+/* EN: Style #toolbar .title .lbl::after: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 #toolbar .title .lbl::after：尺寸与间距、文字显示、颜色与表面样式。 */
+#toolbar .title .lbl::after{content:" TAILWIND";color:var(--accent);font-weight:600;font-size:11px;margin-left:2px;}

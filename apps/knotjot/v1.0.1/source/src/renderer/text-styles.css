@@ -1,0 +1,147 @@
+/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{--ts-panel-width:min(430px,42vw)}
+/* EN: Style #textStylePanel: placement and layout, sizing and spacing, color and surface styling, visual state and motion, interaction and visibility.
+   ZH: 设置 #textStylePanel：位置与布局、尺寸与间距、颜色与表面样式、视觉状态与动效、交互与可见性。 */
+#textStylePanel{position:fixed;z-index:49;right:0;top:30px;bottom:0;width:var(--ts-panel-width);background:var(--panel,#fff);color:var(--ink,#252a36);border-left:1px solid var(--line,#dfe3eb);box-shadow:-4px 0 16px #1111;display:none;flex-direction:column;animation:tsSlide .2s ease-out}
+/* EN: Style body.ts-panel-open #toolbar,body.ts-panel-open #canvas,body.ts-panel-open #sheetTabs: placement and layout.
+   ZH: 设置 body.ts-panel-open #toolbar,body.ts-panel-open #canvas,body.ts-panel-open #sheetTabs：位置与布局。 */
+body.ts-panel-open #toolbar,body.ts-panel-open #canvas,body.ts-panel-open #sheetTabs{right:var(--ts-panel-width)}
+/* EN: Style body.ts-panel-open #empty: placement and layout.
+   ZH: 设置 body.ts-panel-open #empty：位置与布局。 */
+body.ts-panel-open #empty{right:var(--ts-panel-width)}
+/* EN: Style body.ts-panel-open #textStyleBtn: color and surface styling.
+   ZH: 设置 body.ts-panel-open #textStyleBtn：颜色与表面样式。 */
+body.ts-panel-open #textStyleBtn{background:var(--accent-soft,#eaf1ff);color:var(--accent,#4f7ee8)}
+/* EN: Style @keyframes tsSlide: selector-specific appearance.
+   ZH: 设置 @keyframes tsSlide：当前选择器的外观。 */
+@keyframes tsSlide{/* EN: Style from: visual state and motion.
+   ZH: 设置 from：视觉状态与动效。 */
+from{transform:translateX(28px);opacity:.6}/* EN: Style to: visual state and motion.
+   ZH: 设置 to：视觉状态与动效。 */
+to{transform:none;opacity:1}}
+/* EN: Style .ts-head: placement and layout, sizing and spacing, color and surface styling.
+   ZH: 设置 .ts-head：位置与布局、尺寸与间距、颜色与表面样式。 */
+.ts-head{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line,#e2e5ec);gap:10px}/* EN: Style .ts-head strong: text presentation.
+   ZH: 设置 .ts-head strong：文字显示。 */
+.ts-head strong{font-size:16px}/* EN: Style .ts-head .sp: placement and layout.
+   ZH: 设置 .ts-head .sp：位置与布局。 */
+.ts-head .sp{flex:1}
+/* EN: Style .ts-close: text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-close：文字显示、颜色与表面样式、交互与可见性。 */
+.ts-close{border:0;background:transparent;font-size:22px;cursor:pointer;color:inherit}/* EN: Style .ts-tabs: placement and layout, sizing and spacing.
+   ZH: 设置 .ts-tabs：位置与布局、尺寸与间距。 */
+.ts-tabs{display:flex;padding:10px 14px 0;gap:6px}/* EN: Style .ts-tab: sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-tab：尺寸与间距、颜色与表面样式、交互与可见性。 */
+.ts-tab{border:1px solid var(--line,#e2e5ec);background:var(--panel,#fff);padding:8px 12px;border-radius:8px 8px 0 0;cursor:pointer}/* EN: Style .ts-tab.on: color and surface styling.
+   ZH: 设置 .ts-tab.on：颜色与表面样式。 */
+.ts-tab.on{background:var(--accent-soft,#eaf1ff);color:var(--accent,#4f7ee8);border-color:var(--accent,#4f7ee8)}
+/* EN: Style .ts-body: placement and layout, sizing and spacing, interaction and visibility.
+   ZH: 设置 .ts-body：位置与布局、尺寸与间距、交互与可见性。 */
+.ts-body{padding:14px;overflow:auto;flex:1}/* EN: Style .ts-page: placement and layout.
+   ZH: 设置 .ts-page：位置与布局。 */
+.ts-page{display:none}/* EN: Style .ts-page.on: placement and layout.
+   ZH: 设置 .ts-page.on：位置与布局。 */
+.ts-page.on{display:block}/* EN: Style .ts-grid: placement and layout.
+   ZH: 设置 .ts-grid：位置与布局。 */
+.ts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}/* EN: Style .ts-card: placement and layout, sizing and spacing, color and surface styling, visual state and motion, interaction and visibility.
+   ZH: 设置 .ts-card：位置与布局、尺寸与间距、颜色与表面样式、视觉状态与动效、交互与可见性。 */
+.ts-card{border:1px solid var(--line,#dfe3eb);border-radius:10px;background:#fff;padding:8px;min-height:108px;cursor:pointer;transition:.14s;display:flex;flex-direction:column;gap:5px;position:relative}/* EN: Style .ts-card:hover: color and surface styling, visual state and motion.
+   ZH: 设置 .ts-card:hover：颜色与表面样式、视觉状态与动效。 */
+.ts-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px #18243b18}/* EN: Style .ts-card.on: selector-specific appearance.
+   ZH: 设置 .ts-card.on：当前选择器的外观。 */
+.ts-card.on{outline:2px solid var(--accent,#4f7ee8)}/* EN: Style .ts-card.default::after: placement and layout, sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .ts-card.default::after：位置与布局、尺寸与间距、文字显示、颜色与表面样式。 */
+.ts-card.default::after{content:'默认';position:absolute;right:4px;top:4px;background:var(--accent,#4f7ee8);color:#fff;font-size:9px;padding:2px 5px;border-radius:8px}/* EN: Style .ts-sample: placement and layout, sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-sample：位置与布局、尺寸与间距、颜色与表面样式、交互与可见性。 */
+.ts-sample{height:58px;display:flex;align-items:center;justify-content:center;border:1px solid #d9dfeb;overflow:hidden;padding:7px;position:relative}/* EN: Style .ts-name: text presentation, interaction and visibility.
+   ZH: 设置 .ts-name：文字显示、交互与可见性。 */
+.ts-name{font-size:12px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}/* EN: Style .ts-scope: text presentation, color and surface styling.
+   ZH: 设置 .ts-scope：文字显示、颜色与表面样式。 */
+.ts-scope{font-size:9px;color:var(--muted,#73798a);text-align:center}/* EN: Style .ts-card-menu: placement and layout, sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-card-menu：位置与布局、尺寸与间距、颜色与表面样式、交互与可见性。 */
+.ts-card-menu{position:fixed;z-index:1600;min-width:190px;background:#fff;border:1px solid var(--line,#dfe3eb);border-radius:9px;box-shadow:0 10px 28px #1113;padding:5px}/* EN: Style .ts-card-menu button: placement and layout, sizing and spacing, text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-card-menu button：位置与布局、尺寸与间距、文字显示、颜色与表面样式、交互与可见性。 */
+.ts-card-menu button{display:block;width:100%;border:0;background:transparent;text-align:left;padding:8px 10px;border-radius:6px;cursor:pointer;color:inherit}/* EN: Style .ts-card-menu button:hover: color and surface styling.
+   ZH: 设置 .ts-card-menu button:hover：颜色与表面样式。 */
+.ts-card-menu button:hover{background:var(--accent-soft,#eaf1ff)}/* EN: Style .ts-card-menu button.danger: color and surface styling.
+   ZH: 设置 .ts-card-menu button.danger：颜色与表面样式。 */
+.ts-card-menu button.danger{color:#c43b31}/* EN: Style .ts-card-menu button:disabled: visual state and motion, interaction and visibility.
+   ZH: 设置 .ts-card-menu button:disabled：视觉状态与动效、交互与可见性。 */
+.ts-card-menu button:disabled{opacity:.4;cursor:default}
+/* EN: Style .ts-section: sizing and spacing, color and surface styling.
+   ZH: 设置 .ts-section：尺寸与间距、颜色与表面样式。 */
+.ts-section{border:1px solid var(--line,#e2e5ec);border-radius:10px;padding:12px;margin-bottom:12px}/* EN: Style .ts-section h4: sizing and spacing, text presentation.
+   ZH: 设置 .ts-section h4：尺寸与间距、文字显示。 */
+.ts-section h4{margin:0 0 10px;font-size:13px}/* EN: Style .ts-row: placement and layout, sizing and spacing.
+   ZH: 设置 .ts-row：位置与布局、尺寸与间距。 */
+.ts-row{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:9px;margin:8px 0}/* EN: Style .ts-row input,.ts-row select: sizing and spacing, color and surface styling.
+   ZH: 设置 .ts-row input,.ts-row select：尺寸与间距、颜色与表面样式。 */
+.ts-row input,.ts-row select{min-width:0;padding:7px;border:1px solid var(--line,#d9dde7);border-radius:6px;background:#fff}/* EN: Style .ts-checks: placement and layout.
+   ZH: 设置 .ts-checks：位置与布局。 */
+.ts-checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}/* EN: Style .ts-hint: text presentation, color and surface styling.
+   ZH: 设置 .ts-hint：文字显示、颜色与表面样式。 */
+.ts-hint{font-size:12px;color:var(--muted,#73798a);line-height:1.55}/* EN: Style .ts-status: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .ts-status：尺寸与间距、文字显示、颜色与表面样式。 */
+.ts-status{padding:8px 14px;background:var(--accent-soft,#edf3ff);font-size:12px;color:var(--accent,#3f70df)}
+/* EN: Style .ts-custom .card: placement and layout, sizing and spacing, color and surface styling.
+   ZH: 设置 .ts-custom .card：位置与布局、尺寸与间距、颜色与表面样式。 */
+.ts-custom .card{position:relative;isolation:isolate;background:var(--ts-bg,#fff)!important;border-color:var(--ts-border,#dfe3eb)!important;border-width:var(--ts-border-width,1.5px)!important;border-radius:var(--ts-radius,12px)!important;box-shadow:var(--ts-shadow,0 2px 8px #17203314)!important;min-width:var(--ts-min-width,0);min-height:var(--ts-min-height,0)}
+/* EN: Style .ts-custom.ts-replace-frame .card: color and surface styling, visual state and motion.
+   ZH: 设置 .ts-custom.ts-replace-frame .card：颜色与表面样式、视觉状态与动效。 */
+.ts-custom.ts-replace-frame .card{background:transparent!important;background-color:transparent!important;background-image:none!important;border:0 solid transparent!important;border-radius:0!important;box-shadow:none!important;animation:none!important;transition:border-color .15s ease,box-shadow .2s ease,background 0s!important}
+/* EN: Style #nodes .node.ts-custom .card-inner: placement and layout, sizing and spacing, text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 #nodes .node.ts-custom .card-inner：位置与布局、尺寸与间距、文字显示、颜色与表面样式、交互与可见性。 */
+#nodes .node.ts-custom .card-inner{position:relative;z-index:2;color:var(--ts-color,#2c3140)!important;font-family:var(--ts-font-family,inherit)!important;font-size:var(--ts-font-size,14px)!important;font-weight:var(--ts-font-weight,400)!important;font-style:var(--ts-font-style,normal)!important;text-decoration:var(--ts-decoration,none)!important;text-align:var(--ts-align,left)!important;letter-spacing:var(--ts-letter-spacing,0)!important;line-height:var(--ts-line-height,1.4)!important;padding:var(--ts-padding,11px 18px)!important;white-space:var(--ts-white-space,nowrap)!important;max-width:var(--ts-max-width,none)!important;overflow-wrap:anywhere}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .card-inner: placement and layout, sizing and spacing, interaction and visibility.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .card-inner：位置与布局、尺寸与间距、交互与可见性。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .card-inner{position:absolute!important;left:var(--ts-text-x,0)!important;top:var(--ts-text-y,0)!important;width:var(--ts-text-w,100%)!important;height:var(--ts-text-h,100%)!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;box-sizing:border-box!important;display:grid!important;grid-auto-flow:row;align-content:center;justify-content:stretch;padding:4px 6px!important;overflow:hidden!important}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite: visual state and motion, interaction and visibility.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite：视觉状态与动效、交互与可见性。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite{transform-origin:var(--ts-group-anchor-x,50%) var(--ts-group-anchor-y,50%);contain:layout paint;pointer-events:none}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object: interaction and visibility.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object：交互与可见性。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object{overflow:hidden;pointer-events:auto}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object .card-inner: placement and layout, sizing and spacing, interaction and visibility.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object .card-inner：位置与布局、尺寸与间距、交互与可见性。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .ts-decoration.ts-composite .ts-text-object .card-inner{position:static!important;left:auto!important;top:auto!important;width:100%!important;height:100%!important;pointer-events:auto}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .card-inner[contenteditable="true"]:empty::before: selector-specific appearance.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .card-inner[contenteditable="true"]:empty::before：当前选择器的外观。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .card-inner[contenteditable="true"]:empty::before{content:"\200b"}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .card-inner.empty:not([contenteditable="true"])::before: selector-specific appearance.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .card-inner.empty:not([contenteditable="true"])::before：当前选择器的外观。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .card-inner.empty:not([contenteditable="true"])::before{content:""!important}
+/* EN: Style #nodes .node.ts-replace-frame.ts-has-text-region .card-inner.ts-measuring: placement and layout, interaction and visibility.
+   ZH: 设置 #nodes .node.ts-replace-frame.ts-has-text-region .card-inner.ts-measuring：位置与布局、交互与可见性。 */
+#nodes .node.ts-replace-frame.ts-has-text-region .card-inner.ts-measuring{align-content:start!important;align-items:flex-start!important;overflow:auto!important}
+/* EN: Style #nodes .node.ts-size-uniform .card: sizing and spacing.
+   ZH: 设置 #nodes .node.ts-size-uniform .card：尺寸与间距。 */
+#nodes .node.ts-size-uniform .card{box-sizing:border-box!important;width:var(--ts-uniform-size,220px)!important;height:var(--ts-uniform-height,96px)!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important}/* EN: Style #nodes .node.ts-size-stretch .card: sizing and spacing.
+   ZH: 设置 #nodes .node.ts-size-stretch .card：尺寸与间距。 */
+#nodes .node.ts-size-stretch .card{box-sizing:border-box!important;width:var(--ts-stretch-width,220px)!important;height:var(--ts-stretch-height,96px)!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important}
+/* EN: Style .ts-decoration: placement and layout, sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .ts-decoration：位置与布局、尺寸与间距、颜色与表面样式、交互与可见性。 */
+.ts-decoration{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none;overflow:hidden;border-radius:inherit}/* EN: Style .ts-art: placement and layout.
+   ZH: 设置 .ts-art：位置与布局。 */
+.ts-art{position:absolute;box-sizing:border-box}/* EN: Style .ts-art.ellipse: color and surface styling.
+   ZH: 设置 .ts-art.ellipse：颜色与表面样式。 */
+.ts-art.ellipse{border-radius:50%}/* EN: Style .ts-art.line: sizing and spacing, visual state and motion.
+   ZH: 设置 .ts-art.line：尺寸与间距、视觉状态与动效。 */
+.ts-art.line{height:0!important;transform-origin:left center}
+/* EN: Style @media (max-width:900px): selector-specific appearance.
+   ZH: 设置 @media (max-width:900px)：当前选择器的外观。 */
+@media(max-width:900px){/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{--ts-panel-width:min(380px,48vw)}/* EN: Style .ts-grid: placement and layout.
+   ZH: 设置 .ts-grid：位置与布局。 */
+.ts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}/* EN: Style @media (max-width:560px): selector-specific appearance.
+   ZH: 设置 @media (max-width:560px)：当前选择器的外观。 */
+@media(max-width:560px){/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{--ts-panel-width:82vw}/* EN: Style .ts-grid: placement and layout.
+   ZH: 设置 .ts-grid：位置与布局。 */
+.ts-grid{grid-template-columns:1fr}/* EN: Style .ts-row: placement and layout.
+   ZH: 设置 .ts-row：位置与布局。 */
+.ts-row{grid-template-columns:1fr}/* EN: Style .ts-checks: placement and layout.
+   ZH: 设置 .ts-checks：位置与布局。 */
+.ts-checks{grid-template-columns:1fr}}

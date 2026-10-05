@@ -1,0 +1,123 @@
+/* ===== 极简扁平 · 深色模式 ===== */
+/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{
+  --bg:#15181e!important; --grid:#222831!important; --card:#232a35!important; --card-border:#39414f!important;
+  --ink:#e8eaf0!important; --muted:#99a2b2!important; --accent:#6ea0ff!important; --accent-soft:#22314e!important;
+  --brace:#5c6675!important; --danger:#ef6a5a!important;
+  --shadow:0 0 0 1px rgba(0,0,0,.35)!important; --shadow-hi:0 0 0 1px #6ea0ff, 0 6px 20px rgba(0,0,0,.5)!important;
+}
+/* EN: Style html,body: color and surface styling.
+   ZH: 设置 html,body：颜色与表面样式。 */
+html,body{background:#15181e!important;color:var(--ink)!important;}
+/* EN: Style .card: color and surface styling, visual state and motion.
+   ZH: 设置 .card：颜色与表面样式、视觉状态与动效。 */
+.card{animation:none!important;box-shadow:0 0 0 1px rgba(0,0,0,.35)!important;}
+/* EN: Style .card:hover: color and surface styling.
+   ZH: 设置 .card:hover：颜色与表面样式。 */
+.card:hover{box-shadow:0 0 0 1px #6ea0ff!important;}
+/* EN: Style .node.sel .card: color and surface styling.
+   ZH: 设置 .node.sel .card：颜色与表面样式。 */
+.node.sel .card{box-shadow:0 0 0 2px #6ea0ff!important;}
+/* EN: Style #toolbar: color and surface styling.
+   ZH: 设置 #toolbar：颜色与表面样式。 */
+#toolbar{background:rgba(21,24,30,.94)!important;border-bottom-color:#39414f!important;}
+/* EN: Style .btn: color and surface styling.
+   ZH: 设置 .btn：颜色与表面样式。 */
+.btn{background:#232a35!important;color:#e8eaf0!important;border-color:#39414f!important;}
+/* EN: Style .btn:hover: color and surface styling.
+   ZH: 设置 .btn:hover：颜色与表面样式。 */
+.btn:hover{background:#2c3340!important;color:#6ea0ff!important;border-color:#6ea0ff!important;}
+/* EN: Style .btn.primary,.btn.toggle-on: color and surface styling.
+   ZH: 设置 .btn.primary,.btn.toggle-on：颜色与表面样式。 */
+.btn.primary,.btn.toggle-on{background:#6ea0ff!important;color:#10141c!important;border-color:#6ea0ff!important;}
+/* EN: Style .btn.ghost: color and surface styling.
+   ZH: 设置 .btn.ghost：颜色与表面样式。 */
+.btn.ghost{background:transparent!important;border-color:transparent!important;}
+/* EN: Style .btn:disabled: visual state and motion.
+   ZH: 设置 .btn:disabled：视觉状态与动效。 */
+.btn:disabled{opacity:.4!important;}
+/* EN: Style .vsep: color and surface styling.
+   ZH: 设置 .vsep：颜色与表面样式。 */
+.vsep{background:#39414f!important;}
+/* EN: Style .fname: color and surface styling.
+   ZH: 设置 .fname：颜色与表面样式。 */
+.fname{color:#99a2b2!important;}
+/* EN: Style .fname:hover: color and surface styling.
+   ZH: 设置 .fname:hover：颜色与表面样式。 */
+.fname:hover{background:#232a35!important;border-color:#39414f!important;}
+/* EN: Style #hint: color and surface styling.
+   ZH: 设置 #hint：颜色与表面样式。 */
+#hint{color:#7e8696!important;}
+/* EN: Style .popmenu,#ctx,#settingsBox,#colorPanel,.actions,#floatBar: color and surface styling.
+   ZH: 设置 .popmenu,#ctx,#settingsBox,#colorPanel,.actions,#floatBar：颜色与表面样式。 */
+.popmenu,#ctx,#settingsBox,#colorPanel,.actions,#floatBar{background:#232a35!important;color:#e8eaf0!important;border-color:#39414f!important;}
+/* EN: Style .mi,#ctx .item: color and surface styling.
+   ZH: 设置 .mi,#ctx .item：颜色与表面样式。 */
+.mi,#ctx .item{color:#e8eaf0!important;}
+/* EN: Style .mi .sk: color and surface styling.
+   ZH: 设置 .mi .sk：颜色与表面样式。 */
+.mi .sk{color:#7e8696!important;}
+/* EN: Style .mi:hover,.mi.active,#ctx .item:hover: color and surface styling.
+   ZH: 设置 .mi:hover,.mi.active,#ctx .item:hover：颜色与表面样式。 */
+.mi:hover,.mi.active,#ctx .item:hover{background:#22314e!important;color:#a9c6ff!important;}
+/* EN: Style .msep,.sep: color and surface styling.
+   ZH: 设置 .msep,.sep：颜色与表面样式。 */
+.msep,.sep{background:#39414f!important;}
+/* EN: Style .act: color and surface styling.
+   ZH: 设置 .act：颜色与表面样式。 */
+.act{color:#e8eaf0!important;}
+/* EN: Style .act:hover: color and surface styling.
+   ZH: 设置 .act:hover：颜色与表面样式。 */
+.act:hover{background:#22314e!important;color:#a9c6ff!important;}
+/* EN: Style .start-side: color and surface styling.
+   ZH: 设置 .start-side：颜色与表面样式。 */
+.start-side{background:linear-gradient(160deg,#222a3a,#171b25)!important;}
+/* EN: Style .start-main: color and surface styling.
+   ZH: 设置 .start-main：颜色与表面样式。 */
+.start-main{background:#15181e!important;}
+/* EN: Style .start-main .sh: color and surface styling.
+   ZH: 设置 .start-main .sh：颜色与表面样式。 */
+.start-main .sh{color:#cdd3df!important;}
+/* EN: Style .newcard: color and surface styling.
+   ZH: 设置 .newcard：颜色与表面样式。 */
+.newcard{background:#232a35!important;border-color:#39414f!important;}
+/* EN: Style .newcard:hover: color and surface styling.
+   ZH: 设置 .newcard:hover：颜色与表面样式。 */
+.newcard:hover{border-color:#6ea0ff!important;}
+/* EN: Style .nc-s: color and surface styling.
+   ZH: 设置 .nc-s：颜色与表面样式。 */
+.nc-s{color:#99a2b2!important;}
+/* EN: Style .recent .ri:hover: color and surface styling.
+   ZH: 设置 .recent .ri:hover：颜色与表面样式。 */
+.recent .ri:hover{background:#232a35!important;box-shadow:none!important;}
+/* EN: Style .recent .empty-r: color and surface styling.
+   ZH: 设置 .recent .empty-r：颜色与表面样式。 */
+.recent .empty-r{color:#7e8696!important;}
+/* EN: Style #empty .l1: color and surface styling.
+   ZH: 设置 #empty .l1：颜色与表面样式。 */
+#empty .l1{color:#c4cad6!important;}
+/* EN: Style #empty .l2: color and surface styling.
+   ZH: 设置 #empty .l2：颜色与表面样式。 */
+#empty .l2{color:#8a92a3!important;}
+/* EN: Style #settingsBox .set-label,#settingsBox .set-hint: color and surface styling.
+   ZH: 设置 #settingsBox .set-label,#settingsBox .set-hint：颜色与表面样式。 */
+#settingsBox .set-label,#settingsBox .set-hint{color:#cdd3df!important;}
+/* EN: Style #settingsBox .set-hint: color and surface styling.
+   ZH: 设置 #settingsBox .set-hint：颜色与表面样式。 */
+#settingsBox .set-hint{color:#8a92a3!important;}
+/* EN: Style #world: color and surface styling.
+   ZH: 设置 #world：颜色与表面样式。 */
+#world{background-image:linear-gradient(#222831 1px,transparent 1px),linear-gradient(90deg,#222831 1px,transparent 1px)!important;}
+/* EN: Style .brace-path: color and surface styling.
+   ZH: 设置 .brace-path：颜色与表面样式。 */
+.brace-path{stroke:#5c6675!important;}
+/* EN: Style .link-line: color and surface styling.
+   ZH: 设置 .link-line：颜色与表面样式。 */
+.link-line{stroke:#5c6675!important;}
+/* EN: Style .anchor: color and surface styling.
+   ZH: 设置 .anchor：颜色与表面样式。 */
+.anchor{fill:#232a35!important;stroke:#6ea0ff!important;}
+/* EN: Style #toolbar .title .lbl::after: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 #toolbar .title .lbl::after：尺寸与间距、文字显示、颜色与表面样式。 */
+#toolbar .title .lbl::after{content:" 深色·扁平";color:#6ea0ff;font-weight:600;font-size:11px;margin-left:2px;}

@@ -1,0 +1,197 @@
+/* EN: Style :root: theme tokens.
+   ZH: 设置 :root：主题变量。 */
+:root{
+  --toolbar-bg:#ffffff;
+  --menu-bg:#ffffff;
+  --menu-hover:#e8f0ff;
+}
+
+/* 外观令牌只覆盖原版 UI。选择其它皮肤时 appearance.js 会撤销内联令牌。 */
+/* EN: Style html[data-uiskin="default"] #menubar, html[data-uiskin="default"] #toolbar: color and surface styling.
+   ZH: 设置 html[data-uiskin="default"] #menubar, html[data-uiskin="default"] #toolbar：颜色与表面样式。 */
+html[data-uiskin="default"] #menubar,
+html[data-uiskin="default"] #toolbar{background:color-mix(in srgb,var(--toolbar-bg) 88%,transparent);}
+/* EN: Style html[data-uiskin="default"] .popmenu, html[data-uiskin="default"] #ctx, html[data-uiskin="default"] #ctx2: color and surface styling.
+   ZH: 设置 html[data-uiskin="default"] .popmenu, html[data-uiskin="default"] #ctx, html[data-uiskin="default"] #ctx2：颜色与表面样式。 */
+html[data-uiskin="default"] .popmenu,
+html[data-uiskin="default"] #ctx,
+html[data-uiskin="default"] #ctx2{background:var(--menu-bg);}
+/* EN: Style html[data-uiskin="default"] .popmenu .mi:hover, html[data-uiskin="default"] #ctx .mi:hover, html[data-uiskin=": color and surface styling.
+   ZH: 设置 html[data-uiskin="default"] .popmenu .mi:hover, html[data-uiskin="default"] #ctx .mi:hover, html[data-uiskin="：颜色与表面样式。 */
+html[data-uiskin="default"] .popmenu .mi:hover,
+html[data-uiskin="default"] #ctx .mi:hover,
+html[data-uiskin="default"] #ctx2 .mi:hover{background:var(--menu-hover);}
+
+/* 背景层完全独立于 .card/.ts-custom，避免改变默认或自定义文本框。 */
+/* EN: Style #tcCanvasUnlimited: placement and layout, color and surface styling, interaction and visibility.
+   ZH: 设置 #tcCanvasUnlimited：位置与布局、颜色与表面样式、交互与可见性。 */
+#tcCanvasUnlimited{position:absolute;inset:0;display:none;pointer-events:none;z-index:0;background-repeat:repeat;}
+/* EN: Style #world: interaction and visibility.
+   ZH: 设置 #world：交互与可见性。 */
+#world{z-index:1;}
+/* EN: Style #tcCanvasLimited: placement and layout, color and surface styling, interaction and visibility.
+   ZH: 设置 #tcCanvasLimited：位置与布局、颜色与表面样式、交互与可见性。 */
+#tcCanvasLimited{position:absolute;display:none;pointer-events:none;overflow:hidden;z-index:0;
+  border:2px solid color-mix(in srgb,var(--accent) 72%,#ffffff);background-color:var(--bg);
+  box-shadow:0 0 0 1px rgba(20,30,55,.12),0 12px 36px rgba(20,30,55,.12);}
+/* EN: Style #tcCanvasLimitedGrid: placement and layout, color and surface styling.
+   ZH: 设置 #tcCanvasLimitedGrid：位置与布局、颜色与表面样式。 */
+#tcCanvasLimitedGrid{position:absolute;inset:0;background-image:
+  linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;}
+/* EN: Style #tcCanvasLimited.has-image #tcCanvasLimitedGrid: placement and layout.
+   ZH: 设置 #tcCanvasLimited.has-image #tcCanvasLimitedGrid：位置与布局。 */
+#tcCanvasLimited.has-image #tcCanvasLimitedGrid{display:none;}
+/* EN: Style #canvas.tc-limited: color and surface styling.
+   ZH: 设置 #canvas.tc-limited：颜色与表面样式。 */
+#canvas.tc-limited{background-image:none!important;}
+
+/* EN: Style #tcAppearancePanel: sizing and spacing, color and surface styling.
+   ZH: 设置 #tcAppearancePanel：尺寸与间距、颜色与表面样式。 */
+#tcAppearancePanel{margin-top:16px;border-top:1px solid var(--card-border);padding-top:14px;}
+/* EN: Style .tc-app-lock: placement and layout, sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-app-lock：位置与布局、尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-app-lock{display:none;margin:0 0 12px;padding:10px 12px;border:1px solid var(--card-border);border-radius:10px;
+  background:var(--accent-soft);color:var(--ink);font-size:12px;line-height:1.6;}
+/* EN: Style #tcAppearancePanel.palette-locked .tc-app-lock: placement and layout.
+   ZH: 设置 #tcAppearancePanel.palette-locked .tc-app-lock：位置与布局。 */
+#tcAppearancePanel.palette-locked .tc-app-lock{display:block;}
+/* EN: Style #tcAppearancePanel.palette-locked .tc-app-palette, #tcAppearancePanel.palette-locked #tcPaletteExport, #tcAppe: visual state and motion, interaction and visibility.
+   ZH: 设置 #tcAppearancePanel.palette-locked .tc-app-palette, #tcAppearancePanel.palette-locked #tcPaletteExport, #tcAppe：视觉状态与动效、交互与可见性。 */
+#tcAppearancePanel.palette-locked .tc-app-palette,
+#tcAppearancePanel.palette-locked #tcPaletteExport,
+#tcAppearancePanel.palette-locked #tcPaletteReset{opacity:.48;pointer-events:none;user-select:none;}
+/* EN: Style .tc-app-head: placement and layout, sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-app-head：位置与布局、尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-app-head{display:flex;align-items:center;gap:8px;margin:14px 0 9px;font-size:13px;font-weight:700;color:var(--ink);}
+/* EN: Style .tc-app-head:first-child: sizing and spacing.
+   ZH: 设置 .tc-app-head:first-child：尺寸与间距。 */
+.tc-app-head:first-child{margin-top:0;}
+/* EN: Style .tc-app-head .spacer: placement and layout.
+   ZH: 设置 .tc-app-head .spacer：位置与布局。 */
+.tc-app-head .spacer{flex:1;}
+/* EN: Style .tc-app-mini: sizing and spacing, text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-app-mini：尺寸与间距、文字显示、颜色与表面样式、交互与可见性。 */
+.tc-app-mini{height:28px;padding:0 9px;border:1px solid var(--card-border);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer;font-size:11px;}
+/* EN: Style .tc-app-mini:hover: color and surface styling.
+   ZH: 设置 .tc-app-mini:hover：颜色与表面样式。 */
+.tc-app-mini:hover{border-color:var(--accent);color:var(--accent);}
+/* EN: Style .tc-app-palette: placement and layout.
+   ZH: 设置 .tc-app-palette：位置与布局。 */
+.tc-app-palette{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+/* EN: Style .tc-app-color: placement and layout, sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-app-color：位置与布局、尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-app-color{display:grid;grid-template-columns:26px minmax(0,1fr);align-items:center;gap:7px;padding:7px;
+  border:1px solid var(--card-border);border-radius:9px;background:color-mix(in srgb,var(--card) 92%,transparent);font-size:11px;color:var(--ink);}
+/* EN: Style .tc-app-color input: sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-app-color input：尺寸与间距、颜色与表面样式、交互与可见性。 */
+.tc-app-color input{width:26px;height:26px;padding:0;border:0;background:transparent;cursor:pointer;}
+/* EN: Style .tc-app-color span: text presentation, interaction and visibility.
+   ZH: 设置 .tc-app-color span：文字显示、交互与可见性。 */
+.tc-app-color span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+/* EN: Style .tc-bg-toolbar: placement and layout.
+   ZH: 设置 .tc-bg-toolbar：位置与布局。 */
+.tc-bg-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+/* EN: Style .tc-bg-toolbar .tc-bg-name: placement and layout, sizing and spacing, text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-bg-toolbar .tc-bg-name：位置与布局、尺寸与间距、文字显示、颜色与表面样式、交互与可见性。 */
+.tc-bg-toolbar .tc-bg-name{flex:1;min-width:120px;color:var(--muted);font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+/* EN: Style .tc-bg-enable: placement and layout, text presentation, color and surface styling.
+   ZH: 设置 .tc-bg-enable：位置与布局、文字显示、颜色与表面样式。 */
+.tc-bg-enable{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink);}
+/* EN: Style .tc-bg-modes: placement and layout, sizing and spacing.
+   ZH: 设置 .tc-bg-modes：位置与布局、尺寸与间距。 */
+.tc-bg-modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;}
+/* EN: Style .tc-bg-mode: placement and layout, sizing and spacing, text presentation, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-bg-mode：位置与布局、尺寸与间距、文字显示、颜色与表面样式、交互与可见性。 */
+.tc-bg-mode{display:flex;gap:8px;padding:9px;border:1px solid var(--card-border);border-radius:10px;cursor:pointer;font-size:11px;line-height:1.45;color:var(--ink);}
+/* EN: Style .tc-bg-mode:has(input:checked): color and surface styling.
+   ZH: 设置 .tc-bg-mode:has(input:checked)：颜色与表面样式。 */
+.tc-bg-mode:has(input:checked){border-color:var(--accent);background:var(--accent-soft);}
+/* EN: Style .tc-bg-mode b: placement and layout, text presentation.
+   ZH: 设置 .tc-bg-mode b：位置与布局、文字显示。 */
+.tc-bg-mode b{display:block;font-size:12px;}
+/* EN: Style .tc-bg-preview-shell: sizing and spacing, color and surface styling.
+   ZH: 设置 .tc-bg-preview-shell：尺寸与间距、颜色与表面样式。 */
+.tc-bg-preview-shell{border:1px solid var(--card-border);border-radius:12px;padding:10px;background:color-mix(in srgb,var(--bg) 88%,#ffffff);}
+/* EN: Style .tc-bg-preview-head: placement and layout, sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-bg-preview-head：位置与布局、尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-bg-preview-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:var(--muted);font-size:11px;}
+/* EN: Style .tc-bg-preview-head .spacer: placement and layout.
+   ZH: 设置 .tc-bg-preview-head .spacer：位置与布局。 */
+.tc-bg-preview-head .spacer{flex:1;}
+/* EN: Style .tc-bg-preview: placement and layout, sizing and spacing, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-bg-preview：位置与布局、尺寸与间距、颜色与表面样式、交互与可见性。 */
+.tc-bg-preview{position:relative;height:210px;overflow:hidden;border-radius:9px;background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:18px 18px;box-shadow:inset 0 0 0 1px rgba(30,40,70,.08);}
+/* EN: Style .tc-bg-preview-image: placement and layout, color and surface styling.
+   ZH: 设置 .tc-bg-preview-image：位置与布局、颜色与表面样式。 */
+.tc-bg-preview-image{position:absolute;background-repeat:no-repeat;background-color:var(--bg);border:2px solid var(--accent);box-shadow:0 5px 20px rgba(30,50,90,.18);}
+/* EN: Style .tc-bg-preview.unlimited .tc-bg-preview-image: placement and layout, color and surface styling.
+   ZH: 设置 .tc-bg-preview.unlimited .tc-bg-preview-image：位置与布局、颜色与表面样式。 */
+.tc-bg-preview.unlimited .tc-bg-preview-image{inset:0;border:0;box-shadow:none;background-repeat:repeat;}
+/* EN: Style .tc-bg-preview-grid: placement and layout, color and surface styling, interaction and visibility.
+   ZH: 设置 .tc-bg-preview-grid：位置与布局、颜色与表面样式、交互与可见性。 */
+.tc-bg-preview-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:18px 18px;pointer-events:none;}
+/* EN: Style .tc-bg-preview.has-image .tc-bg-preview-grid: placement and layout.
+   ZH: 设置 .tc-bg-preview.has-image .tc-bg-preview-grid：位置与布局。 */
+.tc-bg-preview.has-image .tc-bg-preview-grid{display:none;}
+/* EN: Style .tc-bg-reference: placement and layout, visual state and motion, interaction and visibility.
+   ZH: 设置 .tc-bg-reference：位置与布局、视觉状态与动效、交互与可见性。 */
+.tc-bg-reference{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);transform-origin:center;z-index:2;pointer-events:none;}
+/* EN: Style .tc-bg-reference .card: visual state and motion.
+   ZH: 设置 .tc-bg-reference .card：视觉状态与动效。 */
+.tc-bg-reference .card{animation:none;}
+/* EN: Reserve the real empty card's single text line without showing its editing placeholder in the preview.
+   ZH: 为预览保留真实空卡片的一行文字高度，但不显示编辑占位文字。 */
+.tc-bg-reference .card-inner.empty::before{content:'\00a0'!important;color:transparent;}
+/* EN: Keep the active sheet background action visible beside its tabs and disable editing in read-only mode.
+   ZH: 将当前画布背景入口放在标签旁，并在只读模式禁用编辑。 */
+#sheetBackground{border:0;border-left:1px solid var(--card-border);padding:0 12px;background:var(--card);color:var(--ink);cursor:pointer;font:inherit;white-space:nowrap;}
+body.readonly #sheetBackground{opacity:.5;pointer-events:none;}
+/* EN: Style .tc-bg-controls: placement and layout, sizing and spacing.
+   ZH: 设置 .tc-bg-controls：位置与布局、尺寸与间距。 */
+.tc-bg-controls{display:grid;grid-template-columns:1fr 1fr;gap:9px 12px;margin-top:11px;}
+/* EN: Style .tc-bg-control: placement and layout, text presentation, color and surface styling.
+   ZH: 设置 .tc-bg-control：位置与布局、文字显示、颜色与表面样式。 */
+.tc-bg-control{display:grid;grid-template-columns:88px 1fr 48px;gap:6px;align-items:center;font-size:11px;color:var(--ink);}
+/* EN: Style .tc-bg-control input[type="range"]: sizing and spacing.
+   ZH: 设置 .tc-bg-control input[type="range"]：尺寸与间距。 */
+.tc-bg-control input[type="range"]{min-width:0;accent-color:var(--accent);}
+/* EN: Style .tc-bg-control input[type="number"]: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-bg-control input[type="number"]：尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-bg-control input[type="number"]{width:100%;height:27px;border:1px solid var(--card-border);border-radius:7px;padding:0 5px;background:var(--card);color:var(--ink);font-size:11px;}
+/* EN: Style .tc-bg-control output: text presentation, color and surface styling.
+   ZH: 设置 .tc-bg-control output：文字显示、颜色与表面样式。 */
+.tc-bg-control output{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;}
+/* EN: Style .tc-bg-limited-only: placement and layout.
+   ZH: 设置 .tc-bg-limited-only：位置与布局。 */
+.tc-bg-limited-only{display:none;}
+/* EN: Style #tcAppearancePanel.mode-limited .tc-bg-limited-only: placement and layout.
+   ZH: 设置 #tcAppearancePanel.mode-limited .tc-bg-limited-only：位置与布局。 */
+#tcAppearancePanel.mode-limited .tc-bg-limited-only{display:grid;}
+/* EN: Style .tc-app-actions: placement and layout, sizing and spacing.
+   ZH: 设置 .tc-app-actions：位置与布局、尺寸与间距。 */
+.tc-app-actions{display:flex;align-items:center;gap:8px;margin-top:13px;}
+/* EN: Style .tc-app-actions .spacer: placement and layout.
+   ZH: 设置 .tc-app-actions .spacer：位置与布局。 */
+.tc-app-actions .spacer{flex:1;}
+/* EN: Style .tc-app-status: sizing and spacing, text presentation, color and surface styling.
+   ZH: 设置 .tc-app-status：尺寸与间距、文字显示、颜色与表面样式。 */
+.tc-app-status{min-height:18px;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.5;}
+/* EN: Style .tc-app-status.ok: color and surface styling.
+   ZH: 设置 .tc-app-status.ok：颜色与表面样式。 */
+.tc-app-status.ok{color:#138a4b;}/* EN: Style .tc-app-status.err: color and surface styling.
+   ZH: 设置 .tc-app-status.err：颜色与表面样式。 */
+.tc-app-status.err{color:var(--danger);}
+
+/* EN: Style @media (max-width:980px): selector-specific appearance.
+   ZH: 设置 @media (max-width:980px)：当前选择器的外观。 */
+@media(max-width:980px){
+  /* EN: Style .tc-app-palette: placement and layout.
+   ZH: 设置 .tc-app-palette：位置与布局。 */
+.tc-app-palette{grid-template-columns:repeat(2,minmax(0,1fr));}
+  /* EN: Style .tc-bg-controls: placement and layout.
+   ZH: 设置 .tc-bg-controls：位置与布局。 */
+.tc-bg-controls{grid-template-columns:1fr;}
+}

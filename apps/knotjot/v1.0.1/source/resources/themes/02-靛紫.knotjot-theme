@@ -1,0 +1,11 @@
+{
+    "app":  "brace-mindmap-theme",
+    "version":  1,
+    "name":  "靛紫",
+    "accent":  "#5856d6",
+    "accentSoft":  "#e7e7fb",
+    "sideGrad":  "160deg,#5856d6,#4a48c4",
+    "thumbBlank":  "135deg,#5856d6,#7a78e6",
+    "thumbSample":  "135deg,#4a48c4,#5856d6",
+    "thumbOpen":  "135deg,#1b9e3e,#39b54a"
+}
